@@ -1,0 +1,59 @@
+/* Animations */
+
+.card,
+.brands span,
+.contact-box{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.hero h1{
+
+animation:glow 3s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 15px #2ea8ff;
+
+}
+
+to{
+
+text-shadow:
+0 0 30px #2ea8ff,
+0 0 60px #2ea8ff;
+
+}
+
+}
+
+.card:hover i{
+
+transform:rotate(8deg) scale(1.15);
+
+transition:.4s;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
