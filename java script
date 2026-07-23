@@ -1,0 +1,55 @@
+// Apparition des cartes au défilement
+
+const elements = document.querySelectorAll('.card, .brands span, .contact-box');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+
+    });
+}, {
+    threshold: 0.15
+});
+
+elements.forEach(el => observer.observe(el));
+
+
+// Barre de navigation
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 80) {
+
+        header.style.background = "rgba(5,5,5,0.95)";
+        header.style.boxShadow = "0 10px 35px rgba(0,0,0,.45)";
+
+    } else {
+
+        header.style.background = "rgba(10,10,10,.65)";
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+
+// Effet sur le logo
+
+const logo = document.querySelector(".logo img");
+
+logo.addEventListener("mouseenter", () => {
+
+    logo.style.filter = "drop-shadow(0 0 18px #2ea8ff)";
+
+});
+
+logo.addEventListener("mouseleave", () => {
+
+    logo.style.filter = "none";
+
+});
