@@ -1,635 +1,517 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CVR PRECISION | Rachat de matériel industriel d'occasion</title>
 
-<meta name="description" content="CVR PRECISION rachète vos machines industrielles, machines-outils, équipements professionnels et matériels industriels d'occasion partout en France. Estimation rapide sur photos.">
-<meta name="keywords" content="rachat machine outil, machines industrielles occasion, centre usinage occasion, matériel industriel occasion, rachat équipement industriel">
+<meta name="description" content="CVR PRECISION rachète vos machines industrielles, machines-outils et matériels professionnels d'occasion partout en France. Estimation rapide sur photos.">
+
+<meta name="keywords" content="rachat machine outil, matériel industriel occasion, machine industrielle occasion, centre usinage occasion">
+
 <meta name="author" content="CVR PRECISION">
 
 <meta name="robots" content="index, follow">
+
 <meta name="theme-color" content="#08111f">
 
-<link rel="canonical" href="https://cvrprecision.fr/">
 
-<meta property="og:title" content="CVR PRECISION - Rachat de matériel industriel d'occasion">
+<link rel="canonical" href="https://cvrprecision.github.io/cvr/">
+
+
+<meta property="og:title" content="CVR PRECISION - Rachat de matériel industriel">
+
 <meta property="og:description" content="Nous rachetons votre matériel industriel d'occasion rapidement et simplement.">
+
 <meta property="og:type" content="website">
+
 <meta property="og:image" content="logo.png">
 
+
+
 <meta name="twitter:card" content="summary_large_image">
+
 <meta name="twitter:title" content="CVR PRECISION">
+
 <meta name="twitter:description" content="Rachat de matériel industriel d'occasion.">
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
 
 <style>
 
+
 :root{
+
 --black:#05080d;
+
 --dark:#0b111b;
---dark2:#111827;
---steel:#334155;
---white:#ffffff;
---gray:#94a3b8;
---blue:#008cff;
---blue2:#00c6ff;
---glass:rgba(255,255,255,.08);
+
+--card:rgba(255,255,255,.07);
+
 --border:rgba(255,255,255,.12);
---shadow:0 20px 60px rgba(0,0,0,.45);
---radius:22px;
---transition:.35s ease;
+
+--white:#ffffff;
+
+--gray:#94a3b8;
+
+--blue:#008cff;
+
+--blue2:#00c6ff;
+
+--radius:25px;
+
+--shadow:0 25px 70px rgba(0,0,0,.45);
+
 }
+
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
-scroll-behavior:smooth;
+
 }
+
 
 html{
-overflow-x:hidden;
+
+scroll-behavior:smooth;
+
 }
+
 
 body{
-font-family:'Inter',Arial,sans-serif;
+
+font-family:'Inter',sans-serif;
+
 background:
-radial-gradient(circle at 20% 10%,rgba(0,140,255,.15),transparent 35%),
-radial-gradient(circle at 80% 30%,rgba(0,198,255,.12),transparent 35%),
+
+radial-gradient(circle at top right,rgba(0,140,255,.18),transparent 35%),
+
 var(--black);
-color:var(--white);
+
+color:white;
+
 overflow-x:hidden;
+
 }
 
-a{
-color:inherit;
-text-decoration:none;
-}
 
 img{
+
 max-width:100%;
+
 display:block;
+
 }
+
+
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+
 
 section{
-position:relative;
+
 padding:100px 7%;
+
 }
+
+
 
 .container{
+
 max-width:1400px;
+
 margin:auto;
-}
 
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-track{
-background:#05080d;
-}
-
-::-webkit-scrollbar-thumb{
-background:linear-gradient(var(--blue),var(--blue2));
-border-radius:20px;
 }
 
 
-/* PRELOADER */
 
-.loader{
-position:fixed;
-inset:0;
-background:#05080d;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999;
-transition:opacity .6s ease,visibility .6s ease;
-}
 
-.loader.hide{
-opacity:0;
-visibility:hidden;
-}
 
-.loader span{
-width:70px;
-height:70px;
-border-radius:50%;
-border:4px solid rgba(255,255,255,.1);
-border-top-color:var(--blue);
-animation:spin 1s linear infinite;
+/* LOGO */
+
+
+.logo img{
+
+width:125px;
+
+height:auto;
+
+border-radius:18px;
+
+filter:
+
+drop-shadow(0 0 18px rgba(0,140,255,.35));
+
+transition:.3s;
+
 }
 
-@keyframes spin{
-to{
-transform:rotate(360deg);
+
+
+.logo img:hover{
+
+transform:scale(1.05);
+
 }
-}
+
+
+
 
 
 /* HEADER */
 
+
 header{
+
 position:fixed;
+
 top:0;
+
 left:0;
+
 width:100%;
+
+padding:18px 7%;
+
 z-index:1000;
-padding:25px 7%;
-transition:.4s ease;
+
+transition:.3s;
+
 }
+
+
 
 header.scrolled{
-background:rgba(5,8,13,.75);
+
+background:rgba(5,8,13,.85);
+
 backdrop-filter:blur(18px);
-box-shadow:0 10px 40px rgba(0,0,0,.4);
-padding:15px 7%;
+
+box-shadow:0 10px 40px rgba(0,0,0,.5);
+
 }
+
+
 
 .navbar{
+
 display:flex;
-align-items:center;
+
 justify-content:space-between;
-max-width:1400px;
-margin:auto;
+
+align-items:center;
+
 }
 
-.logo img{
-width:170px;
-height:auto;
-}
+
 
 .nav-links{
+
 display:flex;
+
 gap:35px;
-align-items:center;
+
 }
+
+
 
 .nav-links a{
+
+font-weight:600;
+
 font-size:15px;
-font-weight:500;
+
 position:relative;
+
 }
 
-.nav-links a::after{
+
+
+.nav-links a:after{
+
 content:"";
+
 position:absolute;
+
 bottom:-8px;
+
 left:0;
+
 width:0;
+
 height:2px;
+
 background:var(--blue);
+
 transition:.3s;
+
 }
 
-.nav-links a:hover::after{
+
+
+.nav-links a:hover:after{
+
 width:100%;
+
 }
+
+
 
 .menu-btn{
+
 display:none;
+
 font-size:28px;
+
 cursor:pointer;
+
 }
+
+
+
 
 
 /* HERO */
 
+
 .hero{
+
 min-height:100vh;
+
 display:flex;
+
 align-items:center;
-padding-top:120px;
+
+position:relative;
+
 overflow:hidden;
+
 }
 
-.hero::before{
+
+
+.hero:before{
+
 content:"";
+
 position:absolute;
+
 width:600px;
+
 height:600px;
-right:-200px;
-top:100px;
-background:radial-gradient(circle,var(--blue),transparent 65%);
-filter:blur(80px);
+
+right:-250px;
+
+background:radial-gradient(circle,var(--blue),transparent 70%);
+
+filter:blur(90px);
+
 opacity:.35;
+
 }
+
+
 
 .hero-content{
-max-width:900px;
+
 position:relative;
+
 z-index:2;
+
+max-width:850px;
+
 }
+
+
 
 .hero h1{
-font-size:clamp(2.8rem,6vw,5.8rem);
+
+font-size:clamp(2.5rem,6vw,5.5rem);
+
 line-height:1.05;
+
 font-weight:900;
+
 letter-spacing:-3px;
-margin-bottom:25px;
+
 }
+
+
 
 .hero h1 span{
-background:linear-gradient(90deg,var(--blue),var(--blue2));
--webkit-background-clip:text;
-color:transparent;
+
+color:var(--blue);
+
 }
+
+
 
 .hero p{
-font-size:clamp(1.1rem,2vw,1.4rem);
-color:#cbd5e1;
-max-width:750px;
+
+margin-top:30px;
+
+font-size:1.3rem;
+
 line-height:1.7;
-margin-bottom:45px;
+
+color:#cbd5e1;
+
 }
 
-.hero-buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
+
 
 .btn{
-padding:17px 35px;
-border-radius:50px;
-font-weight:700;
+
 display:inline-flex;
+
 align-items:center;
+
+justify-content:center;
+
 gap:12px;
-transition:var(--transition);
+
+padding:16px 35px;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.3s;
+
+margin-top:35px;
+
 }
+
+
 
 .btn-primary{
+
 background:linear-gradient(90deg,var(--blue),var(--blue2));
-box-shadow:0 0 35px rgba(0,140,255,.45);
+
+box-shadow:0 0 35px rgba(0,140,255,.5);
+
 }
 
-.btn-primary:hover{
-transform:translateY(-5px);
-box-shadow:0 0 60px rgba(0,140,255,.7);
-}
+
 
 .btn-outline{
+
 border:1px solid rgba(255,255,255,.3);
+
 background:rgba(255,255,255,.05);
-backdrop-filter:blur(10px);
+
+margin-left:15px;
+
 }
 
-.btn-outline:hover{
-background:white;
-color:#000;
+
+
+.btn:hover{
+
 transform:translateY(-5px);
+
 }
 
 
-.hero-image{
-position:absolute;
-right:5%;
-bottom:0;
-width:45%;
-opacity:.85;
-z-index:1;
-}
 
-.hero-image img{
-border-radius:30px;
-box-shadow:var(--shadow);
-}
+</style>
+<!-- PARTIE 2 -->
+
+<style>
 
 
 /* TITRES */
 
 .section-title{
+
 text-align:center;
+
 margin-bottom:70px;
+
 }
+
+
 
 .section-title h2{
+
 font-size:clamp(2rem,4vw,3.5rem);
+
 font-weight:800;
+
 margin-bottom:15px;
+
 }
+
+
 
 .section-title p{
+
 color:var(--gray);
+
 font-size:1.1rem;
+
 }
 
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:.8s ease;
-}
 
-.reveal.active{
-opacity:1;
-transform:none;
-}
 
-</style>
 
-</head>
 
-<body>
-
-<div class="loader">
-<span></span>
-</div>
-
-<header>
-<div class="navbar">
-
-<a class="logo" href="#">
-<img src="logo.png" alt="CVR PRECISION">
-</a>
-
-<nav class="nav-links">
-<a href="#accueil">Accueil</a>
-<a href="#presentation">Présentation</a>
-<a href="#rachat">Nous rachetons</a>
-<a href="#services">Prestations</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="menu-btn">
-<i class="fa-solid fa-bars"></i>
-</div>
-
-</div>
-</header>
-
-<main>
-
-<section class="hero" id="accueil">
-
-<div class="hero-content reveal">
-
-<h1>
-Nous rachetons votre
-<span>matériel industriel</span>
-d'occasion
-</h1>
-
-<p>
-Une solution rapide, simple et sécurisée pour valoriser vos équipements industriels.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#contact" class="btn btn-primary">
-<i class="fa-solid fa-file-invoice"></i>
-Demander une estimation
-</a>
-
-<a href="#contact" class="btn btn-outline">
-<i class="fa-solid fa-phone"></i>
-Nous contacter
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80" alt="Machine industrielle">
-</div>
-
-</section>
-<!-- PARTIE 2/10 -->
-
-<section id="presentation">
-
-<div class="container">
-
-<div class="section-title reveal">
-<h2>Présentation de <span style="color:#008cff">CVR PRECISION</span></h2>
-<p>Une expertise dédiée au matériel industriel professionnel.</p>
-</div>
-
-
-<div class="presentation-grid">
-
-
-<div class="presentation-text reveal">
-
-<p>
-Dans le cadre de notre activité, nous recherchons régulièrement du matériel professionnel et industriel d'occasion, à l'unité ou en lot.
-</p>
-
-<p>
-Vous disposez d'équipements inutilisés, remplacés, en surplus, en arrêt de production ou destinés à la réforme ?
-</p>
-
-<p>
-CVR PRECISION peut vous proposer une estimation rapide à partir de simples photos et informations.
-</p>
-
-<p>
-Nous intervenons auprès des entreprises industrielles, ateliers de production, professionnels de la mécanique, fabricants et exploitants partout en France.
-</p>
-
-
-<a href="#contact" class="btn btn-primary">
-<i class="fa-solid fa-camera"></i>
-Envoyer vos équipements
-</a>
-
-
-</div>
-
-
-
-<div class="presentation-card reveal">
-
-<div class="glass-card">
-
-<i class="fa-solid fa-industry"></i>
-
-<h3>Expert industriel</h3>
-
-<p>
-Rachat, valorisation et enlèvement de matériels professionnels directement auprès des entreprises.
-</p>
-
-</div>
-
-
-<div class="glass-card">
-
-<i class="fa-solid fa-truck-fast"></i>
-
-<h3>Intervention nationale</h3>
-
-<p>
-Organisation complète du démontage, chargement et transport.
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<section id="rachat">
-
-
-<div class="container">
-
-
-<div class="section-title reveal">
-
-<h2>Nous rachetons</h2>
-
-<p>
-Une large gamme de matériels industriels.
-</p>
-
-</div>
-
-
-
-<div class="equipment-grid">
-
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-gears"></i>
-<h3>Machines-outils</h3>
-<p>Centres d'usinage, tours CNC, fraiseuses et équipements industriels.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-bolt"></i>
-<h3>Groupes électrogènes</h3>
-<p>Groupes de secours, générateurs industriels et équipements énergétiques.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-tree"></i>
-<h3>Machines à bois</h3>
-<p>Machines professionnelles pour l'industrie du bois.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-industry"></i>
-<h3>Machines aluminium</h3>
-<p>Équipements de fabrication aluminium et production industrielle.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-dolly"></i>
-<h3>Manutention</h3>
-<p>Chariots élévateurs, matériels de levage et équipements logistiques.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-truck-monster"></i>
-<h3>Engins de chantier</h3>
-<p>Matériels TP, véhicules industriels et équipements lourds.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-car"></i>
-<h3>Véhicules professionnels</h3>
-<p>Utilitaires, poids lourds et véhicules d'entreprise.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-scissors"></i>
-<h3>Outils coupants</h3>
-<p>Carbure, porte-outils et stocks industriels.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-industry"></i>
-<h3>Lignes de production</h3>
-<p>Machines complètes et équipements de production.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-boxes-stacked"></i>
-<h3>Stocks industriels</h3>
-<p>Surplus, composants et matériels inutilisés.</p>
-</div>
-
-
-<div class="equipment-card reveal">
-<i class="fa-solid fa-layer-group"></i>
-<h3>Tous matériels industriels</h3>
-<p>Nous étudions toutes propositions.</p>
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<style>
+/* PRESENTATION */
 
 
 .presentation-grid{
 
 display:grid;
+
 grid-template-columns:1fr 1fr;
+
 gap:50px;
+
 align-items:center;
 
 }
 
 
+
 .presentation-text p{
 
-color:#cbd5e1;
 font-size:1.1rem;
+
 line-height:1.8;
-margin-bottom:22px;
+
+color:#cbd5e1;
+
+margin-bottom:20px;
 
 }
 
 
-
-.presentation-card{
-
-display:grid;
-gap:25px;
-
-}
 
 
 
@@ -637,6 +519,7 @@ gap:25px;
 
 
 background:
+
 linear-gradient(
 145deg,
 rgba(255,255,255,.12),
@@ -645,25 +528,27 @@ rgba(255,255,255,.03)
 
 border:1px solid var(--border);
 
-padding:35px;
-
 border-radius:var(--radius);
+
+padding:35px;
 
 backdrop-filter:blur(20px);
 
 box-shadow:var(--shadow);
 
-transition:.4s;
+margin-bottom:25px;
 
+transition:.4s;
 
 }
 
 
+
 .glass-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
-border-color:rgba(0,140,255,.5);
+border-color:var(--blue);
 
 }
 
@@ -685,7 +570,7 @@ margin-bottom:20px;
 
 font-size:1.5rem;
 
-margin-bottom:12px;
+margin-bottom:15px;
 
 }
 
@@ -702,582 +587,9 @@ line-height:1.7;
 
 
 
-.equipment-grid{
 
-display:grid;
 
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-}
-
-
-
-.equipment-card{
-
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.08),
-rgba(255,255,255,.02)
-);
-
-
-border:1px solid var(--border);
-
-border-radius:var(--radius);
-
-padding:35px 25px;
-
-text-align:center;
-
-transition:.4s;
-
-backdrop-filter:blur(15px);
-
-
-}
-
-
-
-.equipment-card:hover{
-
-transform:translateY(-12px);
-
-box-shadow:
-0 20px 50px rgba(0,140,255,.18);
-
-border-color:var(--blue);
-
-}
-
-
-
-.equipment-card i{
-
-font-size:38px;
-
-color:var(--blue);
-
-margin-bottom:20px;
-
-transition:.3s;
-
-}
-
-
-
-.equipment-card:hover i{
-
-transform:scale(1.15);
-
-}
-
-
-
-.equipment-card h3{
-
-font-size:1.15rem;
-
-margin-bottom:15px;
-
-}
-
-
-
-.equipment-card p{
-
-color:var(--gray);
-
-font-size:.95rem;
-
-line-height:1.6;
-
-}
-
-
-
-@media(max-width:1100px){
-
-.equipment-grid{
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-
-.presentation-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.hero-image{
-
-opacity:.25;
-
-width:80%;
-
-}
-
-}
-
-
-
-@media(max-width:768px){
-
-
-.nav-links{
-
-position:fixed;
-
-top:0;
-
-right:-100%;
-
-width:280px;
-
-height:100vh;
-
-background:#070b12;
-
-flex-direction:column;
-
-justify-content:center;
-
-transition:.4s;
-
-box-shadow:-20px 0 50px rgba(0,0,0,.5);
-
-}
-
-
-.nav-links.active{
-
-right:0;
-
-}
-
-
-.menu-btn{
-
-display:block;
-
-}
-
-
-
-.equipment-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-section{
-
-padding:80px 5%;
-
-}
-
-
-.hero h1{
-
-letter-spacing:-1px;
-
-}
-
-
-.hero-image{
-
-display:none;
-
-}
-
-
-}
-
-</style>
-<!-- PARTIE 3/10 -->
-
-<section id="services">
-
-<div class="container">
-
-
-<div class="section-title reveal">
-
-<h2>Nos prestations</h2>
-
-<p>
-Une prise en charge complète de vos équipements industriels.
-</p>
-
-</div>
-
-
-
-<div class="services-grid">
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-camera"></i>
-
-<h3>Estimation sur photos</h3>
-
-<p>
-Envoyez-nous simplement des photos et les informations disponibles. Notre équipe réalise une première analyse rapidement.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-chart-line"></i>
-
-<h3>Valorisation rapide</h3>
-
-<p>
-Nous trouvons la meilleure solution pour donner une seconde vie à vos équipements professionnels.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-screwdriver-wrench"></i>
-
-<h3>Achat en l'état</h3>
-
-<p>
-Nous achetons les machines dans leur état actuel, même avec des défauts ou nécessitant une remise en service.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-ban"></i>
-
-<h3>Aucune garantie demandée</h3>
-
-<p>
-Une solution simple adaptée aux entreprises souhaitant libérer rapidement leur espace industriel.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-map-location-dot"></i>
-
-<h3>Déplacement national</h3>
-
-<p>
-Nous intervenons partout en France pour récupérer vos équipements.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-warehouse"></i>
-
-<h3>Sortie d'usine</h3>
-
-<p>
-Organisation complète de la récupération depuis votre site industriel.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-truck"></i>
-
-<h3>Chargement et transport</h3>
-
-<p>
-Nos solutions comprennent la manutention et l'organisation du transport adapté.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-file-invoice"></i>
-
-<h3>Transport CMR</h3>
-
-<p>
-Gestion professionnelle des opérations de transport avec documents adaptés.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card reveal">
-
-<i class="fa-solid fa-money-bill-transfer"></i>
-
-<h3>Paiement intégral</h3>
-
-<p>
-Le règlement est effectué avant l'enlèvement du matériel selon les modalités convenues.
-</p>
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-<section id="avantages">
-
-
-<div class="container">
-
-
-<div class="section-title reveal">
-
-<h2>Pourquoi choisir CVR PRECISION</h2>
-
-<p>
-Un partenaire fiable pour vos équipements industriels.
-</p>
-
-</div>
-
-
-
-<div class="advantages-grid">
-
-
-
-<div class="advantage-card reveal">
-
-<div class="number">
-01
-</div>
-
-<i class="fa-solid fa-bolt"></i>
-
-<h3>Réactivité</h3>
-
-<p>
-Une réponse rapide pour étudier vos propositions et avancer efficacement.
-</p>
-
-</div>
-
-
-
-<div class="advantage-card reveal">
-
-<div class="number">
-02
-</div>
-
-<i class="fa-solid fa-user-tie"></i>
-
-<h3>Professionnalisme</h3>
-
-<p>
-Une approche adaptée aux contraintes des entreprises industrielles.
-</p>
-
-</div>
-
-
-
-<div class="advantage-card reveal">
-
-<div class="number">
-03
-</div>
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<h3>Paiement sécurisé</h3>
-
-<p>
-Des transactions claires et sécurisées avant enlèvement.
-</p>
-
-</div>
-
-
-
-<div class="advantage-card reveal">
-
-<div class="number">
-04
-</div>
-
-<i class="fa-solid fa-clock"></i>
-
-<h3>Rapidité</h3>
-
-<p>
-Une organisation efficace pour réduire les délais.
-</p>
-
-</div>
-
-
-
-<div class="advantage-card reveal">
-
-<div class="number">
-05
-</div>
-
-<i class="fa-solid fa-handshake"></i>
-
-<h3>Accompagnement</h3>
-
-<p>
-Un interlocuteur unique pour suivre votre projet.
-</p>
-
-</div>
-
-
-
-<div class="advantage-card reveal">
-
-<div class="number">
-06
-</div>
-
-<i class="fa-solid fa-earth-europe"></i>
-
-<h3>Intervention nationale</h3>
-
-<p>
-Une présence auprès des professionnels partout en France.
-</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<section id="chiffres">
-
-
-<div class="container">
-
-
-<div class="stats-grid">
-
-
-
-<div class="stat-card reveal">
-
-<i class="fa-solid fa-industry"></i>
-
-<strong class="counter" data-target="500">0</strong>
-
-<span>Matériels étudiés</span>
-
-</div>
-
-
-
-<div class="stat-card reveal">
-
-<i class="fa-solid fa-location-dot"></i>
-
-<strong class="counter" data-target="100">0</strong>
-
-<span>Déplacements réalisés</span>
-
-</div>
-
-
-
-<div class="stat-card reveal">
-
-<i class="fa-solid fa-users"></i>
-
-<strong class="counter" data-target="15">0</strong>
-
-<span>Années d'expérience</span>
-
-</div>
-
-
-
-<div class="stat-card reveal">
-
-<i class="fa-solid fa-truck-fast"></i>
-
-<strong class="counter" data-target="48">0</strong>
-
-<span>Heures pour une première réponse</span>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<style>
+/* PRESTATIONS */
 
 
 .services-grid{
@@ -1294,18 +606,13 @@ gap:25px;
 
 .service-card{
 
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.1),
-rgba(255,255,255,.03)
-);
+background:var(--card);
 
 border:1px solid var(--border);
 
-padding:35px;
-
 border-radius:var(--radius);
+
+padding:35px;
 
 transition:.4s;
 
@@ -1341,8 +648,6 @@ margin-bottom:25px;
 
 .service-card h3{
 
-font-size:1.3rem;
-
 margin-bottom:15px;
 
 }
@@ -1361,6 +666,10 @@ line-height:1.7;
 
 
 
+
+/* AVANTAGES */
+
+
 .advantages-grid{
 
 display:grid;
@@ -1377,15 +686,13 @@ gap:30px;
 
 position:relative;
 
-padding:40px 30px;
-
-background:rgba(255,255,255,.05);
+background:var(--card);
 
 border:1px solid var(--border);
 
 border-radius:var(--radius);
 
-overflow:hidden;
+padding:40px 30px;
 
 transition:.4s;
 
@@ -1396,24 +703,6 @@ transition:.4s;
 .advantage-card:hover{
 
 transform:translateY(-10px);
-
-}
-
-
-
-.advantage-card .number{
-
-position:absolute;
-
-right:20px;
-
-top:10px;
-
-font-size:80px;
-
-font-weight:900;
-
-color:rgba(255,255,255,.04);
 
 }
 
@@ -1451,44 +740,141 @@ line-height:1.7;
 
 
 
-.stats-grid{
+/* METHODE */
 
-display:grid;
 
-grid-template-columns:repeat(4,1fr);
+.timeline{
 
-gap:25px;
+max-width:900px;
+
+margin:auto;
+
+position:relative;
 
 }
 
 
 
-.stat-card{
+.timeline:before{
 
-text-align:center;
+content:"";
 
-padding:45px 20px;
+position:absolute;
 
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.08),
-rgba(255,255,255,.02)
-);
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:linear-gradient(var(--blue),transparent);
+
+}
+
+
+
+.timeline-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:60px;
+
+}
+
+
+
+.timeline-content{
+
+width:42%;
+
+background:var(--card);
 
 border:1px solid var(--border);
 
 border-radius:var(--radius);
 
+padding:30px;
+
 }
 
 
 
-.stat-card i{
+.timeline-content p{
 
-font-size:40px;
+color:var(--gray);
 
-color:var(--blue);
+line-height:1.7;
+
+}
+
+
+
+.timeline-icon{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:25px;
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+box-shadow:0 0 30px rgba(0,140,255,.5);
+
+}
+
+
+
+
+
+/* CONTACT */
+
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+}
+
+
+
+.contact-card{
+
+display:flex;
+
+gap:20px;
+
+padding:25px;
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:20px;
 
 margin-bottom:20px;
 
@@ -1496,72 +882,514 @@ margin-bottom:20px;
 
 
 
-.stat-card strong{
+.contact-card i{
 
-display:block;
+font-size:30px;
 
-font-size:3rem;
-
-font-weight:900;
+color:var(--blue);
 
 }
 
 
 
-.stat-card span{
+.contact-card p{
 
 color:var(--gray);
 
-}
-
-
-
-@media(max-width:1000px){
-
-.services-grid,
-.advantages-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-
-.stats-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
+margin-top:8px;
 
 }
 
 
 
-@media(max-width:650px){
 
-.services-grid,
-.advantages-grid,
-.stats-grid{
+/* FORMULAIRE */
 
-grid-template-columns:1fr;
+
+.contact-form{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+padding:40px;
+
+border-radius:var(--radius);
 
 }
+
+
+
+.form-group{
+
+margin-bottom:20px;
+
+}
+
+
+
+.form-group label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+
+
+.form-group input,
+.form-group textarea{
+
+width:100%;
+
+padding:15px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:15px;
+
+color:white;
+
+font-family:inherit;
+
+}
+
+
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+outline:none;
+
+border-color:var(--blue);
+
+}
+
+
+
+
+
+.map-container{
+
+height:350px;
+
+margin-top:50px;
+
+border-radius:25px;
+
+overflow:hidden;
+
+}
+
+
+
+.map-container iframe{
+
+width:100%;
+
+height:100%;
+
+border:0;
 
 }
 
 </style>
-<!-- PARTIE 4/10 -->
 
-<section id="methode">
+
+
+<section id="presentation">
 
 <div class="container">
 
 
-<div class="section-title reveal">
+<div class="section-title">
+
+<h2>Présentation de CVR PRECISION</h2>
+
+<p>Une expertise au service du matériel industriel professionnel.</p>
+
+</div>
+
+
+<div class="presentation-grid">
+
+
+<div class="presentation-text">
+
+
+<p>
+Dans le cadre de notre activité, nous recherchons régulièrement du matériel professionnel et industriel d'occasion, à l'unité ou en lot.
+</p>
+
+
+<p>
+Vous disposez d'équipements inutilisés, remplacés, en surplus, en arrêt de production ou destinés à la réforme ?
+</p>
+
+
+<p>
+CVR PRECISION peut vous proposer une estimation rapide à partir de simples photos et informations.
+</p>
+
+
+<a href="#contact" class="btn btn-primary">
+<i class="fa-solid fa-camera"></i>
+Demander une estimation
+</a>
+
+
+</div>
+
+
+
+<div>
+
+
+<div class="glass-card">
+
+<i class="fa-solid fa-industry"></i>
+
+<h3>Expert industriel</h3>
+
+<p>
+Nous étudions vos équipements et proposons une solution adaptée à vos besoins.
+</p>
+
+</div>
+
+
+<div class="glass-card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Prise en charge complète</h3>
+
+<p>
+Organisation de l'enlèvement, chargement et transport.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+<!-- PARTIE 3 -->
+
+<section id="services">
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>Nos prestations</h2>
+
+<p>
+Une solution complète pour valoriser vos équipements industriels.
+</p>
+
+</div>
+
+
+
+<div class="services-grid">
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-camera"></i>
+
+<h3>Estimation sur photos</h3>
+
+<p>
+Envoyez-nous simplement des photos et les informations disponibles. Nous réalisons une première étude rapidement.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Valorisation rapide</h3>
+
+<p>
+Nous recherchons la meilleure solution pour vos matériels industriels inutilisés.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+<h3>Achat en l'état</h3>
+
+<p>
+Nous pouvons reprendre vos équipements même lorsqu'ils nécessitent une remise en état.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-ban"></i>
+
+<h3>Aucune garantie demandée</h3>
+
+<p>
+Une démarche simple adaptée aux entreprises souhaitant libérer rapidement leurs espaces.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Déplacement national</h3>
+
+<p>
+Nous intervenons partout en France pour organiser la récupération.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-warehouse"></i>
+
+<h3>Sortie d'usine</h3>
+
+<p>
+Nous gérons les opérations nécessaires depuis votre site industriel.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-truck"></i>
+
+<h3>Chargement et transport</h3>
+
+<p>
+Organisation du démontage, de la manutention et du transport adapté.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-file-signature"></i>
+
+<h3>Transport CMR</h3>
+
+<p>
+Gestion professionnelle des opérations logistiques.
+</p>
+
+</div>
+
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-money-check-dollar"></i>
+
+<h3>Paiement sécurisé</h3>
+
+<p>
+Le règlement est effectué selon les conditions définies avant enlèvement.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="avantages">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+<h2>Pourquoi choisir CVR PRECISION</h2>
+
+<p>
+Un partenaire fiable pour vos équipements industriels.
+</p>
+
+</div>
+
+
+
+
+<div class="advantages-grid">
+
+
+<div class="advantage-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Réactivité</h3>
+
+<p>
+Une réponse rapide pour étudier vos propositions.
+</p>
+
+</div>
+
+
+
+<div class="advantage-card">
+
+<i class="fa-solid fa-user-tie"></i>
+
+<h3>Professionnalisme</h3>
+
+<p>
+Une approche adaptée aux contraintes industrielles.
+</p>
+
+</div>
+
+
+
+
+<div class="advantage-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Paiement sécurisé</h3>
+
+<p>
+Des échanges clairs et une procédure transparente.
+</p>
+
+</div>
+
+
+
+
+<div class="advantage-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Rapidité</h3>
+
+<p>
+Une organisation efficace pour réduire les délais.
+</p>
+
+</div>
+
+
+
+
+<div class="advantage-card">
+
+<i class="fa-solid fa-handshake"></i>
+
+<h3>Accompagnement</h3>
+
+<p>
+Un interlocuteur unique pour votre projet.
+</p>
+
+</div>
+
+
+
+
+<div class="advantage-card">
+
+<i class="fa-solid fa-earth-europe"></i>
+
+<h3>Intervention nationale</h3>
+
+<p>
+Nous nous déplaçons partout en France.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="methode">
+
+
+<div class="container">
+
+
+<div class="section-title">
 
 <h2>Notre méthode</h2>
 
 <p>
-Un processus simple, rapide et transparent.
+Un processus simple en 5 étapes.
 </p>
 
 </div>
@@ -1572,122 +1400,147 @@ Un processus simple, rapide et transparent.
 
 
 
-<div class="timeline-item reveal">
+<div class="timeline-item">
+
 
 <div class="timeline-icon">
 <i class="fa-solid fa-camera"></i>
 </div>
 
+
 <div class="timeline-content">
 
-<h3>1. Envoi des informations</h3>
+<h3>1. Photos et informations</h3>
 
 <p>
-Vous nous transmettez les photos, références machines, années, caractéristiques techniques et informations disponibles.
+Vous nous transmettez les éléments disponibles concernant votre matériel.
 </p>
 
 </div>
 
+
 </div>
 
 
 
 
-<div class="timeline-item reveal">
+<div class="timeline-item">
+
 
 <div class="timeline-icon">
-<i class="fa-solid fa-magnifying-glass-chart"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
 </div>
+
 
 <div class="timeline-content">
 
-<h3>2. Étude et estimation</h3>
+<h3>2. Analyse</h3>
 
 <p>
-Notre équipe analyse votre matériel afin de déterminer une proposition adaptée au marché.
+Nous étudions votre équipement et son potentiel de valorisation.
 </p>
 
 </div>
 
+
 </div>
 
 
 
 
-<div class="timeline-item reveal">
+
+<div class="timeline-item">
+
 
 <div class="timeline-icon">
-<i class="fa-solid fa-file-signature"></i>
+<i class="fa-solid fa-file-contract"></i>
 </div>
+
 
 <div class="timeline-content">
 
-<h3>3. Validation de l'offre</h3>
+<h3>3. Proposition</h3>
 
 <p>
-Après accord, nous organisons ensemble les modalités d'enlèvement.
+Nous vous transmettons une offre adaptée.
 </p>
 
 </div>
 
+
 </div>
 
 
 
 
-<div class="timeline-item reveal">
+<div class="timeline-item">
+
 
 <div class="timeline-icon">
-<i class="fa-solid fa-truck-ramp-box"></i>
+<i class="fa-solid fa-truck"></i>
 </div>
+
 
 <div class="timeline-content">
 
-<h3>4. Enlèvement du matériel</h3>
+<h3>4. Enlèvement</h3>
 
 <p>
-Nous organisons la sortie, la manutention et le transport de vos équipements.
+Organisation du chargement et du transport.
 </p>
 
 </div>
 
+
 </div>
 
 
 
 
-<div class="timeline-item reveal">
+<div class="timeline-item">
+
 
 <div class="timeline-icon">
 <i class="fa-solid fa-euro-sign"></i>
 </div>
+
 
 <div class="timeline-content">
 
 <h3>5. Paiement</h3>
 
 <p>
-Le règlement est effectué selon les conditions définies avant l'enlèvement.
+Règlement selon les modalités convenues.
 </p>
 
 </div>
 
-</div>
-
-
 
 </div>
 
 
+
 </div>
+
+
+</div>
+
 
 </section>
+<!-- PARTIE 4 -->
+
+<section id="contact">
+
+<div class="container">
 
 
+<div class="section-title">
 
+<h2>Contact CVR PRECISION</h2>
 
-
-
+<p>
+Vous avez du matériel industriel à vendre ? Contactez-nous.
+</p>
 
 </div>
 
@@ -1698,7 +1551,7 @@ Le règlement est effectué selon les conditions définies avant l'enlèvement.
 
 
 
-<div class="contact-info reveal">
+<div>
 
 
 <div class="contact-card">
@@ -1724,7 +1577,7 @@ Le règlement est effectué selon les conditions définies avant l'enlèvement.
 
 <div>
 
-<h3>Votre interlocuteur</h3>
+<h3>Interlocuteur</h3>
 
 <p>Eric</p>
 
@@ -1744,12 +1597,11 @@ Le règlement est effectué selon les conditions définies avant l'enlèvement.
 <h3>Téléphone</h3>
 
 <p>
-<a href="tel:+33695527388">
 +33 6 95 52 73 88
-</a>
 </p>
 
-<a class="small-btn" href="tel:+33695527388">
+<a href="tel:+33695527388" class="btn btn-primary">
+<i class="fa-solid fa-phone"></i>
 Appeler
 </a>
 
@@ -1769,12 +1621,11 @@ Appeler
 <h3>Email</h3>
 
 <p>
-<a href="mailto:cvr.precision@gmail.com">
 cvr.precision@gmail.com
-</a>
 </p>
 
-<a class="small-btn" href="mailto:cvr.precision@gmail.com">
+<a href="mailto:cvr.precision@gmail.com" class="btn btn-primary">
+<i class="fa-solid fa-envelope"></i>
 Envoyer un email
 </a>
 
@@ -1810,10 +1661,14 @@ Envoyer un email
 
 
 
-<div class="contact-form reveal">
 
 
-<form>
+<!-- FORMULAIRE CONNECTE EMAIL -->
+
+<div class="contact-form">
+
+
+<form action="https://formspree.io/f/TON_IDENTIFIANT" method="POST">
 
 
 <div class="form-group">
@@ -1824,6 +1679,7 @@ Nom
 
 <input 
 id="nom"
+name="Nom"
 type="text"
 placeholder="Votre nom"
 required>
@@ -1835,12 +1691,13 @@ required>
 
 <div class="form-group">
 
-<label for="entreprise">
+<label for="societe">
 Entreprise
 </label>
 
 <input 
-id="entreprise"
+id="societe"
+name="Entreprise"
 type="text"
 placeholder="Votre entreprise">
 
@@ -1857,8 +1714,9 @@ Téléphone
 
 <input 
 id="telephone"
+name="Téléphone"
 type="tel"
-placeholder="Votre téléphone">
+placeholder="Votre numéro">
 
 </div>
 
@@ -1873,6 +1731,7 @@ Email
 
 <input 
 id="email"
+name="Email"
 type="email"
 placeholder="Votre email"
 required>
@@ -1885,16 +1744,22 @@ required>
 <div class="form-group">
 
 <label for="message">
-Message
+Votre demande
 </label>
 
 <textarea
 id="message"
-rows="5"
-placeholder="Décrivez votre matériel"></textarea>
+name="Message"
+rows="6"
+placeholder="Décrivez votre matériel"
+required></textarea>
 
 </div>
 
+
+
+
+<input type="hidden" name="_subject" value="Nouvelle demande CVR PRECISION">
 
 
 <button type="submit" class="btn btn-primary">
@@ -1913,27 +1778,36 @@ Envoyer la demande
 </div>
 
 
+
 </div>
 
 
 
 
-<div class="map-container reveal">
+
+<div class="map-container">
+
 
 <iframe
-src="https://maps.google.com/maps?q=131%20Boulevard%20Carnot%2078110%20Le%20V%C3%A9sinet&t=&z=15&ie=UTF8&iwloc=&output=embed"
+
+src="https://maps.google.com/maps?q=131%20Boulevard%20Carnot%2078110%20Le%20V%C3%A9sinet&output=embed"
+
 loading="lazy"
-allowfullscreen=""
-title="Localisation CVR PRECISION">
+
+title="Carte CVR PRECISION">
+
 </iframe>
 
+
 </div>
+
 
 
 </div>
 
 
 </section>
+
 
 
 
@@ -1950,10 +1824,9 @@ title="Localisation CVR PRECISION">
 
 
 
-<div class="footer-brand">
+<div>
 
-
-<img src="logo.png" alt="CVR PRECISION">
+<img src="logo.png" alt="CVR PRECISION" class="footer-logo">
 
 
 <p>
@@ -1961,45 +1834,20 @@ Rachat et valorisation de matériels industriels d'occasion partout en France.
 </p>
 
 
-<div class="socials">
-
-
-<a href="#">
-<i class="fa-brands fa-linkedin-in"></i>
-</a>
-
-
-<a href="#">
-<i class="fa-brands fa-facebook-f"></i>
-</a>
-
-
-<a href="#">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-
-</div>
-
-
 </div>
 
 
 
 
-
-<div class="footer-links">
-
+<div>
 
 <h3>Navigation</h3>
 
-<a href="#accueil">Accueil</a>
-
 <a href="#presentation">Présentation</a>
 
-<a href="#rachat">Matériels</a>
-
 <a href="#services">Prestations</a>
+
+<a href="#avantages">Pourquoi nous</a>
 
 <a href="#contact">Contact</a>
 
@@ -2010,8 +1858,7 @@ Rachat et valorisation de matériels industriels d'occasion partout en France.
 
 
 
-<div class="footer-contact">
-
+<div>
 
 <h3>Coordonnées</h3>
 
@@ -2028,29 +1875,19 @@ cvr.precision@gmail.com
 </p>
 
 
-<p>
-<i class="fa-solid fa-location-dot"></i>
-Le Vésinet, France
-</p>
-
-
 </div>
 
 
 
 </div>
-
-
 
 
 
 <div class="footer-bottom">
 
-
 <p>
 © 2026 CVR PRECISION - Tous droits réservés.
 </p>
-
 
 </div>
 
@@ -2060,212 +1897,17 @@ Le Vésinet, France
 
 
 </footer>
-
-
-
-
-
-<button class="top-btn">
-
-<i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-
-
-
+<!-- PARTIE 5 -->
 
 <style>
 
 
-
-.contact-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:50px;
-
-}
-
-
-
-.contact-card{
-
-display:flex;
-
-gap:25px;
-
-align-items:flex-start;
-
-padding:25px;
-
-margin-bottom:20px;
-
-background:rgba(255,255,255,.06);
-
-border:1px solid var(--border);
-
-border-radius:20px;
-
-}
-
-
-
-.contact-card i{
-
-font-size:30px;
-
-color:var(--blue);
-
-}
-
-
-
-.contact-card h3{
-
-margin-bottom:8px;
-
-}
-
-
-
-.contact-card p{
-
-color:var(--gray);
-
-line-height:1.6;
-
-}
-
-
-
-.small-btn{
-
-display:inline-block;
-
-margin-top:10px;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-background:rgba(0,140,255,.15);
-
-color:#fff;
-
-font-size:.9rem;
-
-}
-
-
-
-
-
-.contact-form{
-
-background:rgba(255,255,255,.06);
-
-padding:40px;
-
-border-radius:var(--radius);
-
-border:1px solid var(--border);
-
-backdrop-filter:blur(15px);
-
-}
-
-
-
-.form-group{
-
-margin-bottom:20px;
-
-}
-
-
-
-.form-group label{
-
-display:block;
-
-margin-bottom:8px;
-
-font-weight:600;
-
-}
-
-
-
-.form-group input,
-.form-group textarea{
-
-
-width:100%;
-
-padding:15px 18px;
-
-background:rgba(255,255,255,.08);
-
-border:1px solid rgba(255,255,255,.15);
-
-border-radius:15px;
-
-color:white;
-
-font-family:inherit;
-
-}
-
-
-
-.form-group input:focus,
-.form-group textarea:focus{
-
-outline:none;
-
-border-color:var(--blue);
-
-}
-
-
-
-
-
-.map-container{
-
-margin-top:60px;
-
-height:400px;
-
-overflow:hidden;
-
-border-radius:25px;
-
-border:1px solid var(--border);
-
-}
-
-
-
-.map-container iframe{
-
-width:100%;
-
-height:100%;
-
-border:0;
-
-}
-
-
+/* FOOTER */
 
 
 footer{
 
-background:#03050a;
+background:#03070d;
 
 padding:70px 7% 30px;
 
@@ -2287,9 +1929,11 @@ gap:50px;
 
 
 
-.footer-brand img{
+.footer-logo{
 
-width:180px;
+width:110px;
+
+border-radius:18px;
 
 margin-bottom:20px;
 
@@ -2297,7 +1941,7 @@ margin-bottom:20px;
 
 
 
-.footer-brand p{
+footer p{
 
 color:var(--gray);
 
@@ -2307,33 +1951,21 @@ line-height:1.7;
 
 
 
-.socials{
+footer h3{
 
-display:flex;
-
-gap:15px;
-
-margin-top:25px;
+margin-bottom:20px;
 
 }
 
 
 
-.socials a{
+footer a{
 
-width:45px;
+display:block;
 
-height:45px;
+color:#cbd5e1;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:rgba(255,255,255,.08);
-
-border-radius:50%;
+margin-bottom:12px;
 
 transition:.3s;
 
@@ -2341,41 +1973,11 @@ transition:.3s;
 
 
 
-.socials a:hover{
+footer a:hover{
 
-background:var(--blue);
+color:var(--blue);
 
-transform:translateY(-5px);
-
-}
-
-
-
-.footer-links,
-.footer-contact{
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-
-
-.footer-links h3,
-.footer-contact h3{
-
-margin-bottom:15px;
-
-}
-
-
-
-.footer-contact p{
-
-color:var(--gray);
+padding-left:8px;
 
 }
 
@@ -2391,19 +1993,24 @@ border-top:1px solid rgba(255,255,255,.1);
 
 text-align:center;
 
-color:var(--gray);
-
 }
 
+
+
+
+
+
+
+/* BOUTON RETOUR HAUT */
 
 
 .top-btn{
 
 position:fixed;
 
-bottom:30px;
+right:25px;
 
-right:30px;
+bottom:25px;
 
 width:55px;
 
@@ -2413,11 +2020,7 @@ border-radius:50%;
 
 border:0;
 
-background:linear-gradient(
-135deg,
-var(--blue),
-var(--blue2)
-);
+background:linear-gradient(135deg,var(--blue),var(--blue2));
 
 color:white;
 
@@ -2431,7 +2034,7 @@ visibility:hidden;
 
 transition:.3s;
 
-z-index:900;
+z-index:999;
 
 }
 
@@ -2447,45 +2050,420 @@ visibility:visible;
 
 
 
-@media(max-width:900px){
 
-.contact-grid,
+
+
+
+/* ANIMATIONS */
+
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.8s ease;
+
+}
+
+
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+
+
+
+
+/* TABLETTE */
+
+
+@media(max-width:1000px){
+
+
+.services-grid,
+
+.advantages-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.presentation-grid,
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.timeline:before{
+
+left:25px;
+
+}
+
+
+
+.timeline-item{
+
+justify-content:flex-start;
+
+padding-left:70px;
+
+}
+
+
+
+.timeline-content{
+
+width:100%;
+
+}
+
+
+
+.timeline-icon{
+
+left:25px;
+
+}
+
+
+
 .footer-grid{
 
 grid-template-columns:1fr;
 
 }
 
+
+
 }
 
+
+
+
+
+
+
+
+
+/* SMARTPHONE */
+
+
+@media(max-width:768px){
+
+
+
+section{
+
+padding:70px 5%;
+
+}
+
+
+
+/* LOGO MOBILE */
+
+
+.logo img{
+
+width:95px;
+
+border-radius:15px;
+
+}
+
+
+
+
+
+header{
+
+padding:15px 5%;
+
+background:rgba(5,8,13,.35);
+
+backdrop-filter:blur(12px);
+
+}
+
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+
+.nav-links{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:80%;
+
+height:100vh;
+
+background:#070d16;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:35px;
+
+transition:.4s;
+
+box-shadow:-20px 0 60px rgba(0,0,0,.5);
+
+}
+
+
+
+.nav-links.active{
+
+right:0;
+
+}
+
+
+
+.hero{
+
+padding-top:120px;
+
+min-height:auto;
+
+}
+
+
+
+.hero h1{
+
+font-size:2.5rem;
+
+letter-spacing:-1px;
+
+}
+
+
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+
+
+.hero-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+
+.btn{
+
+width:100%;
+
+margin-left:0!important;
+
+padding:16px 20px;
+
+}
+
+
+
+.services-grid,
+
+.advantages-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.glass-card,
+
+.service-card,
+
+.advantage-card{
+
+padding:25px;
+
+}
+
+
+
+.contact-form{
+
+padding:25px 18px;
+
+}
+
+
+
+.contact-card{
+
+padding:18px;
+
+}
+
+
+
+.map-container{
+
+height:280px;
+
+}
+
+
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.top-btn{
+
+width:48px;
+
+height:48px;
+
+right:18px;
+
+bottom:18px;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+/* PETITS TELEPHONES */
+
+
+@media(max-width:400px){
+
+
+.hero h1{
+
+font-size:2.1rem;
+
+}
+
+
+
+.logo img{
+
+width:85px;
+
+}
+
+
+
+}
+
+
 </style>
-<!-- PARTIE 6/10 -->
+
+
+
+
+
+<button class="top-btn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
 
 <script>
 
-document.addEventListener("DOMContentLoaded",()=>{
+
+/* MENU MOBILE */
 
 
-/* PRELOADER */
+const menuBtn=document.querySelector(".menu-btn");
 
-const loader=document.querySelector(".loader");
-
-setTimeout(()=>{
-
-loader.classList.add("hide");
-
-},800);
+const navLinks=document.querySelector(".nav-links");
 
 
 
+if(menuBtn){
 
-/* HEADER SCROLL */
+
+menuBtn.addEventListener("click",()=>{
+
+
+navLinks.classList.toggle("active");
+
+
+menuBtn.innerHTML=
+navLinks.classList.contains("active")
+?
+'<i class="fa-solid fa-xmark"></i>'
+:
+'<i class="fa-solid fa-bars"></i>';
+
+
+
+});
+
+
+}
+
+
+
+
+
+/* HEADER */
 
 const header=document.querySelector("header");
 
+
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>80){
+
+if(window.scrollY>50){
 
 header.classList.add("scrolled");
 
@@ -2495,51 +2473,14 @@ header.classList.remove("scrolled");
 
 }
 
-});
-
-
-
-
-
-/* MENU MOBILE */
-
-const menuBtn=document.querySelector(".menu-btn");
-
-const nav=document.querySelector(".nav-links");
-
-menuBtn.addEventListener("click",()=>{
-
-nav.classList.toggle("active");
-
-menuBtn.innerHTML=
-nav.classList.contains("active")
-?
-'<i class="fa-solid fa-xmark"></i>'
-:
-'<i class="fa-solid fa-bars"></i>';
-
-});
-
-
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-nav.classList.remove("active");
-
-menuBtn.innerHTML=
-'<i class="fa-solid fa-bars"></i>';
-
-});
 
 });
 
 
 
 
+/* APPARITION SCROLL */
 
-/* ANIMATIONS SCROLL */
 
 const observer=new IntersectionObserver((entries)=>{
 
@@ -2553,15 +2494,11 @@ entry.target.classList.add("active");
 
 }
 
-});
-
-
-},
-{
-
-threshold:.15
 
 });
+
+
+},{threshold:.15});
 
 
 
@@ -2575,94 +2512,10 @@ observer.observe(el);
 
 
 
+/* RETOUR HAUT */
 
 
-/* COMPTEURS */
-
-const counters=document.querySelectorAll(".counter");
-
-
-let started=false;
-
-
-const counterObserver=new IntersectionObserver(entries=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting && !started){
-
-
-started=true;
-
-
-counters.forEach(counter=>{
-
-
-let target=parseInt(counter.dataset.target);
-
-let current=0;
-
-let increment=Math.ceil(target/80);
-
-
-
-let timer=setInterval(()=>{
-
-
-current+=increment;
-
-
-if(current>=target){
-
-counter.textContent=target;
-
-clearInterval(timer);
-
-}else{
-
-counter.textContent=current;
-
-}
-
-
-},25);
-
-
-
-});
-
-
-}
-
-
-
-});
-
-
-},{threshold:.5});
-
-
-
-const stats=document.querySelector("#chiffres");
-
-
-if(stats){
-
-counterObserver.observe(stats);
-
-}
-
-
-
-
-
-
-
-/* RETOUR EN HAUT */
-
-const topBtn=document.querySelector(".top-btn");
+const top=document.querySelector(".top-btn");
 
 
 window.addEventListener("scroll",()=>{
@@ -2670,11 +2523,11 @@ window.addEventListener("scroll",()=>{
 
 if(window.scrollY>500){
 
-topBtn.classList.add("active");
+top.classList.add("active");
 
 }else{
 
-topBtn.classList.remove("active");
+top.classList.remove("active");
 
 }
 
@@ -2683,8 +2536,7 @@ topBtn.classList.remove("active");
 
 
 
-topBtn.addEventListener("click",()=>{
-
+top.onclick=()=>{
 
 window.scrollTo({
 
@@ -2694,71 +2546,76 @@ behavior:"smooth"
 
 });
 
-
-});
-
+};
 
 
 
+</script>
+<!-- PARTIE 6 - FIN DU FICHIER -->
+
+<script>
 
 
+/* FERMETURE MENU APRES CLIC */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
 
-/* LIGHTBOX GALERIE */
+link.addEventListener("click",()=>{
 
 
-const galleryImages=document.querySelectorAll(".gallery-item img");
-
-const lightbox=document.querySelector(".lightbox");
-
-const lightboxImg=document.querySelector(".lightbox img");
-
-const closeLightbox=document.querySelector(".close-lightbox");
+if(navLinks){
 
 
-
-galleryImages.forEach(image=>{
-
-
-image.addEventListener("click",()=>{
+navLinks.classList.remove("active");
 
 
-lightboxImg.src=image.src;
+if(menuBtn){
 
-lightboxImg.alt=image.alt;
+menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>';
 
-lightbox.classList.add("active");
+}
 
-
-});
-
-
-});
-
-
-
-closeLightbox.addEventListener("click",()=>{
-
-
-lightbox.classList.remove("active");
-
-
-});
-
-
-
-lightbox.addEventListener("click",(e)=>{
-
-
-if(e.target===lightbox){
-
-lightbox.classList.remove("active");
 
 }
 
 
 });
 
+
+});
+
+
+
+
+
+/* ANIMATION DES CARTES */
+
+document.querySelectorAll(
+".service-card,.advantage-card,.glass-card,.contact-card"
+).forEach(card=>{
+
+
+card.addEventListener("mouseenter",()=>{
+
+
+card.style.transform="translateY(-8px)";
+
+
+});
+
+
+
+card.addEventListener("mouseleave",()=>{
+
+
+card.style.transform="translateY(0)";
+
+
+});
+
+
+});
 
 
 
@@ -2770,107 +2627,36 @@ lightbox.classList.remove("active");
 const form=document.querySelector("form");
 
 
-form.addEventListener("submit",(e)=>{
+if(form){
 
 
-e.preventDefault();
+form.addEventListener("submit",()=>{
 
 
 const button=form.querySelector("button");
 
 
 button.innerHTML=
-'<i class="fa-solid fa-check"></i> Demande envoyée';
-
-
-
-button.style.background="#16a34a";
-
-
-setTimeout(()=>{
-
-
-form.reset();
-
-
-button.innerHTML=
-'<i class="fa-solid fa-paper-plane"></i> Envoyer la demande';
-
-
-button.style.background="";
-
-
-},3000);
+'<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...';
 
 
 
 });
-
-
-
-
-
-
-
-/* EFFET LUMIERE SOURIS DESKTOP */
-
-
-const hero=document.querySelector(".hero");
-
-
-document.addEventListener("mousemove",(e)=>{
-
-
-if(window.innerWidth>900){
-
-
-let x=e.clientX/window.innerWidth*100;
-
-let y=e.clientY/window.innerHeight*100;
-
-
-hero.style.background=
-`
-radial-gradient(
-circle at ${x}% ${y}%,
-rgba(0,140,255,.12),
-transparent 25%
-)
-`;
-
-}
-
-
-});
-
-
-
-
-
-
-/* FERMETURE ESC LIGHTBOX */
-
-
-document.addEventListener("keydown",(e)=>{
-
-
-if(e.key==="Escape"){
-
-
-lightbox.classList.remove("active");
 
 
 }
 
 
-});
 
 
-
-});
 
 </script>
-<!-- PARTIE 7/10 -->
+
+
+
+
+
+<!-- SEO STRUCTURE -->
 
 <script type="application/ld+json">
 
@@ -2878,1446 +2664,21 @@ lightbox.classList.remove("active");
 "@context":"https://schema.org",
 "@type":"LocalBusiness",
 "name":"CVR PRECISION",
-"description":"Rachat de matériel industriel d'occasion, machines-outils, équipements professionnels et matériels industriels.",
-"image":"logo.png",
-"url":"https://cvrprecision.fr",
+"description":"Rachat de matériel industriel d'occasion, machines-outils et équipements professionnels.",
 "telephone":"+33695527388",
 "email":"cvr.precision@gmail.com",
+"url":"https://cvr-precision.github.io/cvr/",
 "address":{
 "@type":"PostalAddress",
 "streetAddress":"131 Boulevard Carnot",
 "postalCode":"78110",
 "addressLocality":"Le Vésinet",
-"addressCountry":"FR"
+"addressCountry":"France"
 },
-"areaServed":{
-"@type":"Country",
-"name":"France"
-},
-"priceRange":"€€",
-"openingHours":"Mo-Fr 08:00-18:00"
+"areaServed":"France"
 }
 
 </script>
-
-
-
-
-
-<style>
-
-
-/* SECTION METHODE */
-
-#methode{
-
-background:
-linear-gradient(
-180deg,
-transparent,
-rgba(0,140,255,.04),
-transparent
-);
-
-}
-
-
-
-
-
-/* EFFETS PREMIUM SUPPLEMENTAIRES */
-
-
-section::before{
-
-content:"";
-
-position:absolute;
-
-width:300px;
-
-height:300px;
-
-border-radius:50%;
-
-background:rgba(0,140,255,.08);
-
-filter:blur(100px);
-
-z-index:-1;
-
-}
-
-
-
-section:nth-child(even)::before{
-
-right:0;
-
-}
-
-
-
-section:nth-child(odd)::before{
-
-left:0;
-
-}
-
-
-
-
-
-/* GLASS PREMIUM */
-
-.glass-effect{
-
-
-background:
-
-linear-gradient(
-135deg,
-rgba(255,255,255,.12),
-rgba(255,255,255,.02)
-);
-
-border:
-
-1px solid rgba(255,255,255,.15);
-
-box-shadow:
-
-inset 0 1px 1px rgba(255,255,255,.15),
-
-0 25px 70px rgba(0,0,0,.45);
-
-backdrop-filter:
-
-blur(25px);
-
-
-}
-
-
-
-
-
-
-/* SEPARATEURS INDUSTRIELS */
-
-
-.industry-line{
-
-height:1px;
-
-width:100%;
-
-background:
-
-linear-gradient(
-90deg,
-transparent,
-var(--blue),
-transparent
-);
-
-margin:50px 0;
-
-}
-
-
-
-
-
-/* BOUTONS */
-
-
-.btn{
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-
-
-.btn::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:-100%;
-
-width:100%;
-
-height:100%;
-
-background:
-
-linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,.35),
-transparent
-);
-
-transition:.6s;
-
-}
-
-
-
-.btn:hover::before{
-
-left:100%;
-
-}
-
-
-
-
-
-/* IMAGE HERO OPTIMISATION */
-
-
-.hero-image img{
-
-animation:
-
-floating 8s ease-in-out infinite;
-
-}
-
-
-
-@keyframes floating{
-
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* LOGO */
-
-
-.logo img{
-
-filter:
-
-drop-shadow(
-0 0 20px rgba(0,140,255,.25)
-);
-
-transition:.4s;
-
-}
-
-
-
-.logo img:hover{
-
-transform:scale(1.05);
-
-}
-
-
-
-
-
-/* CURSEUR CUSTOM */
-
-
-.cursor-dot{
-
-position:fixed;
-
-width:12px;
-
-height:12px;
-
-background:var(--blue);
-
-border-radius:50%;
-
-pointer-events:none;
-
-z-index:99999;
-
-transform:translate(-50%,-50%);
-
-mix-blend-mode:screen;
-
-display:none;
-
-}
-
-
-
-@media(min-width:1000px){
-
-
-.cursor-dot{
-
-display:block;
-
-}
-
-
-}
-
-
-
-
-/* BARRE DE PROGRESSION */
-
-
-.progress-bar{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-height:4px;
-
-width:0;
-
-background:
-
-linear-gradient(
-90deg,
-var(--blue),
-var(--blue2)
-);
-
-z-index:99999;
-
-}
-
-
-
-
-
-/* SECTION CONTACT */
-
-
-#contact{
-
-background:
-
-radial-gradient(
-circle at center,
-rgba(0,140,255,.1),
-transparent 45%
-);
-
-}
-
-
-
-
-
-/* INPUTS */
-
-
-input::placeholder,
-textarea::placeholder{
-
-color:#94a3b8;
-
-}
-
-
-
-
-
-/* FOOTER HOVER */
-
-
-.footer-links a{
-
-color:#cbd5e1;
-
-transition:.3s;
-
-}
-
-
-
-.footer-links a:hover{
-
-color:var(--blue);
-
-padding-left:8px;
-
-}
-
-
-
-
-
-/* ACCESSIBILITE */
-
-
-a:focus,
-button:focus,
-input:focus,
-textarea:focus{
-
-outline:2px solid var(--blue);
-
-outline-offset:3px;
-
-}
-
-
-
-
-
-/* REDUCED MOTION */
-
-
-@media(prefers-reduced-motion:reduce){
-
-
-*,
-*::before,
-*::after{
-
-animation:none!important;
-
-transition:none!important;
-
-scroll-behavior:auto!important;
-
-}
-
-
-}
-
-
-
-</style>
-
-
-
-
-
-<div class="progress-bar"></div>
-
-<div class="cursor-dot"></div>
-
-
-
-
-<script>
-
-
-/* BARRE DE PROGRESSION */
-
-const progress=document.querySelector(".progress-bar");
-
-
-window.addEventListener("scroll",()=>{
-
-
-let height=document.documentElement.scrollHeight-window.innerHeight;
-
-
-let progressValue=(window.scrollY/height)*100;
-
-
-progress.style.width=progressValue+"%";
-
-
-});
-
-
-
-
-
-
-
-/* CURSEUR */
-
-const cursor=document.querySelector(".cursor-dot");
-
-
-document.addEventListener("mousemove",(e)=>{
-
-
-if(window.innerWidth>1000){
-
-
-cursor.style.left=e.clientX+"px";
-
-cursor.style.top=e.clientY+"px";
-
-
-}
-
-
-});
-
-
-
-
-
-/* EFFET HOVER CURSEUR */
-
-
-document.querySelectorAll("a,button,.equipment-card,.service-card").forEach(item=>{
-
-
-item.addEventListener("mouseenter",()=>{
-
-
-cursor.style.transform="translate(-50%,-50%) scale(2)";
-
-
-});
-
-
-
-item.addEventListener("mouseleave",()=>{
-
-
-cursor.style.transform="translate(-50%,-50%) scale(1)";
-
-
-});
-
-
-});
-
-
-
-</script>
-<!-- PARTIE 8/10 -->
-
-<section id="engagement">
-
-<div class="container">
-
-
-<div class="section-title reveal">
-
-<h2>Notre engagement</h2>
-
-<p>
-Une approche professionnelle basée sur la confiance et la transparence.
-</p>
-
-</div>
-
-
-
-<div class="engagement-grid">
-
-
-
-<div class="engagement-card reveal">
-
-<i class="fa-solid fa-recycle"></i>
-
-<h3>Donner une seconde vie</h3>
-
-<p>
-Nous contribuons à la revalorisation des équipements industriels en favorisant leur réutilisation.
-</p>
-
-</div>
-
-
-
-
-<div class="engagement-card reveal">
-
-<i class="fa-solid fa-handshake-angle"></i>
-
-<h3>Une relation durable</h3>
-
-<p>
-Nous privilégions des échanges simples, rapides et professionnels avec nos partenaires.
-</p>
-
-</div>
-
-
-
-
-<div class="engagement-card reveal">
-
-<i class="fa-solid fa-industry"></i>
-
-<h3>Culture industrielle</h3>
-
-<p>
-Notre connaissance du secteur permet d'évaluer différents types d'équipements professionnels.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-
-
-.engagement-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-}
-
-
-
-.engagement-card{
-
-padding:40px 30px;
-
-background:
-
-linear-gradient(
-145deg,
-rgba(255,255,255,.08),
-rgba(255,255,255,.02)
-);
-
-border:1px solid var(--border);
-
-border-radius:var(--radius);
-
-text-align:center;
-
-transition:.4s;
-
-}
-
-
-
-.engagement-card:hover{
-
-transform:translateY(-10px);
-
-border-color:var(--blue);
-
-box-shadow:0 20px 60px rgba(0,140,255,.15);
-
-}
-
-
-
-.engagement-card i{
-
-font-size:45px;
-
-color:var(--blue);
-
-margin-bottom:25px;
-
-}
-
-
-
-.engagement-card h3{
-
-font-size:1.4rem;
-
-margin-bottom:15px;
-
-}
-
-
-
-.engagement-card p{
-
-color:var(--gray);
-
-line-height:1.7;
-
-}
-
-
-
-
-
-
-
-.faq-container{
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-
-
-.faq-item{
-
-margin-bottom:20px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid var(--border);
-
-border-radius:20px;
-
-overflow:hidden;
-
-}
-
-
-
-.faq-question{
-
-width:100%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:25px;
-
-background:none;
-
-border:0;
-
-color:white;
-
-font-size:1.1rem;
-
-font-weight:700;
-
-cursor:pointer;
-
-text-align:left;
-
-}
-
-
-
-.faq-question i{
-
-transition:.3s;
-
-color:var(--blue);
-
-}
-
-
-
-.faq-item.active .faq-question i{
-
-transform:rotate(180deg);
-
-}
-
-
-
-.faq-answer{
-
-max-height:0;
-
-overflow:hidden;
-
-transition:max-height .4s ease;
-
-}
-
-
-
-.faq-answer p{
-
-padding:0 25px 25px;
-
-color:var(--gray);
-
-line-height:1.7;
-
-}
-
-
-
-
-@media(max-width:900px){
-
-
-.engagement-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-
-</style>
-
-
-
-
-
-<script>
-
-
-/* FAQ ACCORDEON */
-
-
-document.querySelectorAll(".faq-question").forEach(button=>{
-
-
-button.addEventListener("click",()=>{
-
-
-const item=button.parentElement;
-
-const answer=item.querySelector(".faq-answer");
-
-
-document.querySelectorAll(".faq-item").forEach(other=>{
-
-
-if(other!==item){
-
-other.classList.remove("active");
-
-other.querySelector(".faq-answer").style.maxHeight=null;
-
-}
-
-
-});
-
-
-
-item.classList.toggle("active");
-
-
-
-if(item.classList.contains("active")){
-
-
-answer.style.maxHeight=answer.scrollHeight+"px";
-
-
-}else{
-
-
-answer.style.maxHeight=null;
-
-
-}
-
-
-
-});
-
-
-});
-
-
-
-</script>
-<!-- PARTIE 9/10 -->
-
-<section id="cta">
-
-<div class="container">
-
-
-<div class="cta-box reveal">
-
-
-<div class="cta-content">
-
-
-<h2>
-Vous avez du matériel industriel à valoriser ?
-</h2>
-
-
-<p>
-Contactez CVR PRECISION dès aujourd'hui pour obtenir une première estimation.
-</p>
-
-
-
-<div class="hero-buttons">
-
-
-<a href="tel:+33695527388" class="btn btn-primary">
-
-<i class="fa-solid fa-phone"></i>
-
-Appeler maintenant
-
-</a>
-
-
-<a href="mailto:cvr.precision@gmail.com" class="btn btn-outline">
-
-<i class="fa-solid fa-envelope"></i>
-
-Envoyer un email
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section id="mentions">
-
-
-<div class="container">
-
-
-<div class="legal-box reveal">
-
-
-<h2>
-Informations légales
-</h2>
-
-
-<p>
-CVR PRECISION - Rachat et valorisation de matériels industriels d'occasion.
-</p>
-
-
-<p>
-Les informations présentes sur ce site sont fournies à titre indicatif et peuvent évoluer.
-</p>
-
-
-<p>
-Toute reproduction totale ou partielle du contenu du site sans autorisation préalable est interdite.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<style>
-
-
-#cta{
-
-padding-top:50px;
-
-}
-
-
-
-.cta-box{
-
-position:relative;
-
-overflow:hidden;
-
-padding:80px 50px;
-
-border-radius:35px;
-
-background:
-
-linear-gradient(
-135deg,
-rgba(0,140,255,.25),
-rgba(0,198,255,.08)
-);
-
-border:1px solid rgba(255,255,255,.2);
-
-text-align:center;
-
-box-shadow:
-
-0 30px 80px rgba(0,0,0,.4);
-
-}
-
-
-
-.cta-box::before{
-
-content:"";
-
-position:absolute;
-
-width:400px;
-
-height:400px;
-
-background:
-
-radial-gradient(
-circle,
-rgba(0,198,255,.4),
-transparent 70%
-);
-
-top:-200px;
-
-right:-150px;
-
-filter:blur(40px);
-
-}
-
-
-
-.cta-content{
-
-position:relative;
-
-z-index:2;
-
-}
-
-
-
-.cta-content h2{
-
-font-size:clamp(2rem,4vw,3.5rem);
-
-margin-bottom:20px;
-
-}
-
-
-
-.cta-content p{
-
-font-size:1.2rem;
-
-color:#dbeafe;
-
-margin-bottom:35px;
-
-}
-
-
-
-
-.legal-box{
-
-background:rgba(255,255,255,.05);
-
-border:1px solid var(--border);
-
-border-radius:25px;
-
-padding:40px;
-
-}
-
-
-
-.legal-box h2{
-
-margin-bottom:20px;
-
-}
-
-
-
-.legal-box p{
-
-color:var(--gray);
-
-line-height:1.8;
-
-margin-bottom:15px;
-
-}
-
-
-
-</style>
-
-
-
-
-
-
-
-<script>
-
-
-/* SMOOTH ANCHOR FIX */
-
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-
-anchor.addEventListener("click",function(e){
-
-
-const target=document.querySelector(this.getAttribute("href"));
-
-
-if(target){
-
-
-e.preventDefault();
-
-
-target.scrollIntoView({
-
-behavior:"smooth",
-
-block:"start"
-
-});
-
-
-}
-
-
-
-});
-
-
-});
-
-
-
-
-
-/* IMAGE LAZY FALLBACK */
-
-
-if("loading" in HTMLImageElement.prototype){
-
-
-document.querySelectorAll("img").forEach(img=>{
-
-
-img.loading="lazy";
-
-
-});
-
-
-}
-
-
-
-
-
-
-/* ANIMATION DES CARTES AU PASSAGE SOURIS */
-
-
-const cards=document.querySelectorAll(
-".equipment-card,.service-card,.advantage-card,.engagement-card,.stat-card"
-);
-
-
-
-cards.forEach(card=>{
-
-
-card.addEventListener("mousemove",(e)=>{
-
-
-const rect=card.getBoundingClientRect();
-
-
-const x=e.clientX-rect.left;
-
-const y=e.clientY-rect.top;
-
-
-const centerX=rect.width/2;
-
-const centerY=rect.height/2;
-
-
-const rotateX=(y-centerY)/25;
-
-const rotateY=(centerX-x)/25;
-
-
-card.style.transform=
-`
-perspective(800px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-translateY(-8px)
-`;
-
-
-
-});
-
-
-
-card.addEventListener("mouseleave",()=>{
-
-
-card.style.transform="";
-
-
-});
-
-
-
-});
-
-
-
-</script>
-<!-- PARTIE 10/10 -->
-
-<script>
-
-
-/* PROTECTION DES LIENS EMAIL ET TELEPHONE */
-
-document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link=>{
-
-
-link.addEventListener("mouseenter",()=>{
-
-link.style.opacity="0.75";
-
-});
-
-
-link.addEventListener("mouseleave",()=>{
-
-link.style.opacity="1";
-
-});
-
-
-});
-
-
-
-
-
-/* ANIMATION APPARITION DES ELEMENTS AU CHARGEMENT */
-
-
-window.addEventListener("load",()=>{
-
-
-document.querySelectorAll(".hero .reveal").forEach((element,index)=>{
-
-
-setTimeout(()=>{
-
-
-element.classList.add("active");
-
-
-},300 + index*200);
-
-
-
-});
-
-
-});
-
-
-
-
-
-/* OBSERVATION DES ELEMENTS DYNAMIQUES */
-
-
-const dynamicObserver=new MutationObserver(()=>{
-
-
-document.querySelectorAll(".reveal:not(.observed)").forEach(element=>{
-
-
-element.classList.add("observed");
-
-
-observer.observe(element);
-
-
-});
-
-
-});
-
-
-
-dynamicObserver.observe(document.body,{
-
-childList:true,
-
-subtree:true
-
-});
-
-
-
-
-
-
-/* VERIFICATION FORMULAIRE */
-
-const inputs=document.querySelectorAll("input,textarea");
-
-
-inputs.forEach(input=>{
-
-
-input.addEventListener("input",()=>{
-
-
-if(input.value.trim()!==""){
-
-
-input.style.borderColor="rgba(0,140,255,.8)";
-
-
-}else{
-
-
-input.style.borderColor="rgba(255,255,255,.15)";
-
-
-}
-
-
-});
-
-
-});
-
-
-
-
-
-
-/* PREVENTION ERREURS IMAGE */
-
-document.querySelectorAll("img").forEach(img=>{
-
-
-img.addEventListener("error",()=>{
-
-
-img.style.display="none";
-
-
-});
-
-
-});
-
-
-
-</script>
-
-
-
-
-
-
-<!-- DONNEES STRUCTUREES SUPPLEMENTAIRES SEO -->
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-"@type":"WebSite",
-"name":"CVR PRECISION",
-"url":"https://cvrprecision.fr",
-"potentialAction":{
-"@type":"SearchAction",
-"target":"https://cvrprecision.fr/?s={search_term_string}",
-"query-input":"required name=search_term_string"
-}
-}
-
-</script>
-
 
 
 
@@ -4329,28 +2690,17 @@ img.style.display="none";
 "@context":"https://schema.org",
 "@type":"Organization",
 "name":"CVR PRECISION",
-"url":"https://cvrprecision.fr",
 "logo":"logo.png",
 "contactPoint":{
 "@type":"ContactPoint",
 "telephone":"+33695527388",
 "contactType":"customer service",
-"email":"cvr.precision@gmail.com",
-"areaServed":"FR",
-"availableLanguage":"French"
+"email":"cvr.precision@gmail.com"
 }
+
 }
 
 </script>
-
-
-
-
-
-
-<!-- FIN DU SITE -->
-
-</main>
 
 
 
