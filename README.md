@@ -1690,7 +1690,7 @@ Le règlement est effectué selon les conditions définies avant l'enlèvement.
 
 
 
-</sty<!-- PARTIE 5/10 -->
+
 
 <section id="contact">
 
