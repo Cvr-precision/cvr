@@ -7,41 +7,30 @@
 
 <title>CVR PRECISION | Rachat de matériel industriel d'occasion</title>
 
-<meta name="description" content="CVR PRECISION rachète vos machines industrielles, machines-outils et matériels professionnels d'occasion partout en France. Estimation rapide sur photos.">
+<meta name="description" content="CVR PRECISION rachète vos machines industrielles, machines-outils et équipements professionnels d'occasion partout en France. Estimation rapide sur photos.">
 
-<meta name="keywords" content="rachat machine outil, matériel industriel occasion, machine industrielle occasion, centre usinage occasion">
+<meta name="keywords" content="rachat machine outil, machine industrielle occasion, matériel industriel occasion, centre usinage occasion">
 
 <meta name="author" content="CVR PRECISION">
 
 <meta name="robots" content="index, follow">
 
-<meta name="theme-color" content="#08111f">
-
-
-<link rel="canonical" href="https://cvrprecision.github.io/cvr/">
+<meta name="theme-color" content="#050b14">
 
 
 <meta property="og:title" content="CVR PRECISION - Rachat de matériel industriel">
 
 <meta property="og:description" content="Nous rachetons votre matériel industriel d'occasion rapidement et simplement.">
 
-<meta property="og:type" content="website">
-
 <meta property="og:image" content="logo.png">
 
+<meta property="og:type" content="website">
 
-
-<meta name="twitter:card" content="summary_large_image">
-
-<meta name="twitter:title" content="CVR PRECISION">
-
-<meta name="twitter:description" content="Rachat de matériel industriel d'occasion.">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -55,27 +44,26 @@
 
 :root{
 
---black:#05080d;
+--bg:#050912;
 
---dark:#0b111b;
+--bg2:#0b1422;
 
---card:rgba(255,255,255,.07);
+--card:rgba(255,255,255,.06);
 
 --border:rgba(255,255,255,.12);
 
---white:#ffffff;
+--white:#fff;
 
---gray:#94a3b8;
+--text:#cbd5e1;
 
 --blue:#008cff;
 
---blue2:#00c6ff;
+--cyan:#00d4ff;
 
---radius:25px;
-
---shadow:0 25px 70px rgba(0,0,0,.45);
+--radius:28px;
 
 }
+
 
 
 *{
@@ -89,6 +77,7 @@ box-sizing:border-box;
 }
 
 
+
 html{
 
 scroll-behavior:smooth;
@@ -96,15 +85,18 @@ scroll-behavior:smooth;
 }
 
 
+
 body{
 
-font-family:'Inter',sans-serif;
+font-family:'Inter',Arial,sans-serif;
 
 background:
 
-radial-gradient(circle at top right,rgba(0,140,255,.18),transparent 35%),
+radial-gradient(circle at 20% 10%,rgba(0,140,255,.18),transparent 30%),
 
-var(--black);
+radial-gradient(circle at 90% 50%,rgba(0,212,255,.12),transparent 30%),
+
+var(--bg);
 
 color:white;
 
@@ -113,11 +105,26 @@ overflow-x:hidden;
 }
 
 
-img{
 
-max-width:100%;
+body:before{
 
-display:block;
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+pointer-events:none;
+
+z-index:-1;
 
 }
 
@@ -133,9 +140,19 @@ color:inherit;
 
 
 
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+
+
 section{
 
-padding:100px 7%;
+padding:110px 7%;
 
 }
 
@@ -148,38 +165,6 @@ max-width:1400px;
 margin:auto;
 
 }
-
-
-
-
-
-/* LOGO */
-
-
-.logo img{
-
-width:125px;
-
-height:auto;
-
-border-radius:18px;
-
-filter:
-
-drop-shadow(0 0 18px rgba(0,140,255,.35));
-
-transition:.3s;
-
-}
-
-
-
-.logo img:hover{
-
-transform:scale(1.05);
-
-}
-
 
 
 
@@ -197,11 +182,11 @@ left:0;
 
 width:100%;
 
-padding:18px 7%;
+z-index:999;
 
-z-index:1000;
+padding:22px 7%;
 
-transition:.3s;
+transition:.4s;
 
 }
 
@@ -209,11 +194,11 @@ transition:.3s;
 
 header.scrolled{
 
-background:rgba(5,8,13,.85);
+background:rgba(5,9,18,.85);
 
-backdrop-filter:blur(18px);
+backdrop-filter:blur(20px);
 
-box-shadow:0 10px 40px rgba(0,0,0,.5);
+border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
@@ -223,17 +208,49 @@ box-shadow:0 10px 40px rgba(0,0,0,.5);
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
 
+justify-content:space-between;
+
 }
+
+
+
+/* LOGO */
+
+.logo img{
+
+width:135px;
+
+height:auto;
+
+border-radius:22px;
+
+filter:
+
+drop-shadow(0 0 25px rgba(0,140,255,.45));
+
+transition:.3s;
+
+}
+
+
+
+.logo img:hover{
+
+transform:scale(1.05);
+
+}
+
+
 
 
 
 .nav-links{
 
 display:flex;
+
+align-items:center;
 
 gap:35px;
 
@@ -243,9 +260,11 @@ gap:35px;
 
 .nav-links a{
 
+font-size:15px;
+
 font-weight:600;
 
-font-size:15px;
+color:#e2e8f0;
 
 position:relative;
 
@@ -267,7 +286,7 @@ width:0;
 
 height:2px;
 
-background:var(--blue);
+background:var(--cyan);
 
 transition:.3s;
 
@@ -287,11 +306,18 @@ width:100%;
 
 display:none;
 
+background:none;
+
+border:0;
+
+color:white;
+
 font-size:28px;
 
 cursor:pointer;
 
 }
+
 
 
 
@@ -310,29 +336,7 @@ align-items:center;
 
 position:relative;
 
-overflow:hidden;
-
-}
-
-
-
-.hero:before{
-
-content:"";
-
-position:absolute;
-
-width:600px;
-
-height:600px;
-
-right:-250px;
-
-background:radial-gradient(circle,var(--blue),transparent 70%);
-
-filter:blur(90px);
-
-opacity:.35;
+padding-top:120px;
 
 }
 
@@ -340,11 +344,7 @@ opacity:.35;
 
 .hero-content{
 
-position:relative;
-
-z-index:2;
-
-max-width:850px;
+max-width:900px;
 
 }
 
@@ -352,11 +352,11 @@ max-width:850px;
 
 .hero h1{
 
-font-size:clamp(2.5rem,6vw,5.5rem);
-
-line-height:1.05;
+font-size:clamp(2.8rem,6vw,5.8rem);
 
 font-weight:900;
+
+line-height:1.05;
 
 letter-spacing:-3px;
 
@@ -366,7 +366,7 @@ letter-spacing:-3px;
 
 .hero h1 span{
 
-color:var(--blue);
+color:var(--cyan);
 
 }
 
@@ -376,11 +376,25 @@ color:var(--blue);
 
 margin-top:30px;
 
-font-size:1.3rem;
+max-width:700px;
+
+font-size:1.25rem;
 
 line-height:1.7;
 
-color:#cbd5e1;
+color:var(--text);
+
+}
+
+
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+margin-top:40px;
 
 }
 
@@ -396,15 +410,17 @@ justify-content:center;
 
 gap:12px;
 
-padding:16px 35px;
+padding:17px 35px;
 
 border-radius:50px;
 
 font-weight:700;
 
-transition:.3s;
+transition:.35s;
 
-margin-top:35px;
+cursor:pointer;
+
+border:none;
 
 }
 
@@ -412,21 +428,21 @@ margin-top:35px;
 
 .btn-primary{
 
-background:linear-gradient(90deg,var(--blue),var(--blue2));
+background:linear-gradient(135deg,var(--blue),var(--cyan));
 
-box-shadow:0 0 35px rgba(0,140,255,.5);
+box-shadow:0 0 40px rgba(0,140,255,.45);
 
 }
 
 
 
-.btn-outline{
+.btn-secondary{
 
-border:1px solid rgba(255,255,255,.3);
+border:1px solid rgba(255,255,255,.25);
 
-background:rgba(255,255,255,.05);
+background:rgba(255,255,255,.06);
 
-margin-left:15px;
+backdrop-filter:blur(10px);
 
 }
 
@@ -440,13 +456,36 @@ transform:translateY(-5px);
 
 
 
+.hero-glow{
+
+position:absolute;
+
+width:600px;
+
+height:600px;
+
+right:-250px;
+
+top:100px;
+
+background:radial-gradient(circle,var(--blue),transparent 70%);
+
+filter:blur(100px);
+
+opacity:.35;
+
+}
+
+
+
 </style>
-<!-- PARTIE 2 -->
+<!-- PARTIE 2/4 -->
 
 <style>
 
 
-/* TITRES */
+/* TITRES SECTIONS */
+
 
 .section-title{
 
@@ -462,7 +501,7 @@ margin-bottom:70px;
 
 font-size:clamp(2rem,4vw,3.5rem);
 
-font-weight:800;
+font-weight:900;
 
 margin-bottom:15px;
 
@@ -472,7 +511,7 @@ margin-bottom:15px;
 
 .section-title p{
 
-color:var(--gray);
+color:var(--text);
 
 font-size:1.1rem;
 
@@ -503,11 +542,11 @@ align-items:center;
 
 font-size:1.1rem;
 
-line-height:1.8;
+line-height:1.9;
 
-color:#cbd5e1;
+color:var(--text);
 
-margin-bottom:20px;
+margin-bottom:22px;
 
 }
 
@@ -515,15 +554,18 @@ margin-bottom:20px;
 
 
 
-.glass-card{
-
+.premium-card{
 
 background:
 
 linear-gradient(
+
 145deg,
+
 rgba(255,255,255,.12),
+
 rgba(255,255,255,.03)
+
 );
 
 border:1px solid var(--border);
@@ -534,9 +576,7 @@ padding:35px;
 
 backdrop-filter:blur(20px);
 
-box-shadow:var(--shadow);
-
-margin-bottom:25px;
+box-shadow:0 25px 70px rgba(0,0,0,.35);
 
 transition:.4s;
 
@@ -544,9 +584,9 @@ transition:.4s;
 
 
 
-.glass-card:hover{
+.premium-card:hover{
 
-transform:translateY(-8px);
+transform:translateY(-10px);
 
 border-color:var(--blue);
 
@@ -554,11 +594,11 @@ border-color:var(--blue);
 
 
 
-.glass-card i{
+.premium-card i{
 
-font-size:40px;
+font-size:42px;
 
-color:var(--blue);
+color:var(--cyan);
 
 margin-bottom:20px;
 
@@ -566,9 +606,9 @@ margin-bottom:20px;
 
 
 
-.glass-card h3{
+.premium-card h3{
 
-font-size:1.5rem;
+font-size:1.4rem;
 
 margin-bottom:15px;
 
@@ -576,9 +616,9 @@ margin-bottom:15px;
 
 
 
-.glass-card p{
+.premium-card p{
 
-color:var(--gray);
+color:var(--text);
 
 line-height:1.7;
 
@@ -589,7 +629,7 @@ line-height:1.7;
 
 
 
-/* PRESTATIONS */
+/* SERVICES */
 
 
 .services-grid{
@@ -616,8 +656,6 @@ padding:35px;
 
 transition:.4s;
 
-backdrop-filter:blur(15px);
-
 }
 
 
@@ -626,9 +664,9 @@ backdrop-filter:blur(15px);
 
 transform:translateY(-10px);
 
-border-color:var(--blue);
+box-shadow:0 20px 60px rgba(0,140,255,.15);
 
-box-shadow:0 20px 50px rgba(0,140,255,.2);
+border-color:var(--cyan);
 
 }
 
@@ -636,9 +674,9 @@ box-shadow:0 20px 50px rgba(0,140,255,.2);
 
 .service-card i{
 
-font-size:40px;
+font-size:38px;
 
-color:var(--blue);
+color:var(--cyan);
 
 margin-bottom:25px;
 
@@ -650,13 +688,15 @@ margin-bottom:25px;
 
 margin-bottom:15px;
 
+font-size:1.25rem;
+
 }
 
 
 
 .service-card p{
 
-color:var(--gray);
+color:var(--text);
 
 line-height:1.7;
 
@@ -666,8 +706,7 @@ line-height:1.7;
 
 
 
-
-/* AVANTAGES */
+/* POURQUOI NOUS */
 
 
 .advantages-grid{
@@ -682,37 +721,47 @@ gap:30px;
 
 
 
-.advantage-card{
+.advantage{
 
-position:relative;
+background:
 
-background:var(--card);
+linear-gradient(
+
+145deg,
+
+rgba(255,255,255,.08),
+
+rgba(255,255,255,.02)
+
+);
 
 border:1px solid var(--border);
 
 border-radius:var(--radius);
 
-padding:40px 30px;
+padding:35px;
 
-transition:.4s;
-
-}
-
-
-
-.advantage-card:hover{
-
-transform:translateY(-10px);
+transition:.35s;
 
 }
 
 
 
-.advantage-card i{
+.advantage:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--blue);
+
+}
+
+
+
+.advantage i{
 
 font-size:40px;
 
-color:var(--blue);
+color:var(--cyan);
 
 margin-bottom:20px;
 
@@ -720,7 +769,7 @@ margin-bottom:20px;
 
 
 
-.advantage-card h3{
+.advantage h3{
 
 margin-bottom:15px;
 
@@ -728,9 +777,9 @@ margin-bottom:15px;
 
 
 
-.advantage-card p{
+.advantage p{
 
-color:var(--gray);
+color:var(--text);
 
 line-height:1.7;
 
@@ -740,106 +789,80 @@ line-height:1.7;
 
 
 
-/* METHODE */
+/* PROCESS */
 
 
-.timeline{
+.process{
 
-max-width:900px;
+display:grid;
 
-margin:auto;
+grid-template-columns:repeat(5,1fr);
 
-position:relative;
-
-}
-
-
-
-.timeline:before{
-
-content:"";
-
-position:absolute;
-
-left:50%;
-
-top:0;
-
-bottom:0;
-
-width:2px;
-
-background:linear-gradient(var(--blue),transparent);
+gap:20px;
 
 }
 
 
 
-.timeline-item{
+.process-card{
 
-display:flex;
+text-align:center;
 
-justify-content:space-between;
-
-align-items:center;
-
-margin-bottom:60px;
-
-}
-
-
-
-.timeline-content{
-
-width:42%;
+padding:30px 20px;
 
 background:var(--card);
 
 border:1px solid var(--border);
 
-border-radius:var(--radius);
-
-padding:30px;
+border-radius:25px;
 
 }
 
 
 
-.timeline-content p{
-
-color:var(--gray);
-
-line-height:1.7;
-
-}
-
-
-
-.timeline-icon{
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-background:linear-gradient(135deg,var(--blue),var(--blue2));
+.process-card span{
 
 display:flex;
+
+width:60px;
+
+height:60px;
+
+margin:auto auto 20px;
 
 align-items:center;
 
 justify-content:center;
 
-font-size:25px;
+border-radius:50%;
 
-position:absolute;
+background:linear-gradient(135deg,var(--blue),var(--cyan));
 
-left:50%;
+font-size:24px;
 
-transform:translateX(-50%);
+font-weight:900;
 
-box-shadow:0 0 30px rgba(0,140,255,.5);
+}
+
+
+
+.process-card h3{
+
+font-size:1rem;
+
+margin-bottom:12px;
+
+}
+
+
+
+.process-card p{
+
+font-size:.9rem;
+
+color:var(--text);
+
+line-height:1.6;
 
 }
 
@@ -862,19 +885,21 @@ gap:50px;
 
 
 
-.contact-card{
+.contact-item{
 
 display:flex;
 
 gap:20px;
 
-padding:25px;
+align-items:flex-start;
 
 background:var(--card);
 
 border:1px solid var(--border);
 
-border-radius:20px;
+border-radius:22px;
+
+padding:25px;
 
 margin-bottom:20px;
 
@@ -882,23 +907,24 @@ margin-bottom:20px;
 
 
 
-.contact-card i{
+.contact-item i{
 
 font-size:30px;
 
-color:var(--blue);
+color:var(--cyan);
 
 }
 
 
 
-.contact-card p{
+.contact-item p{
 
-color:var(--gray);
+color:var(--text);
 
 margin-top:8px;
 
 }
+
 
 
 
@@ -908,13 +934,25 @@ margin-top:8px;
 
 .contact-form{
 
-background:var(--card);
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(255,255,255,.10),
+
+rgba(255,255,255,.03)
+
+);
 
 border:1px solid var(--border);
 
 padding:40px;
 
 border-radius:var(--radius);
+
+backdrop-filter:blur(15px);
 
 }
 
@@ -941,64 +979,41 @@ font-weight:600;
 
 
 .form-group input,
+
 .form-group textarea{
 
 width:100%;
 
-padding:15px;
+padding:16px;
 
 background:rgba(255,255,255,.08);
 
 border:1px solid rgba(255,255,255,.15);
 
-border-radius:15px;
+border-radius:16px;
 
 color:white;
 
-font-family:inherit;
+font-size:15px;
 
 }
 
 
 
 .form-group input:focus,
+
 .form-group textarea:focus{
 
 outline:none;
 
-border-color:var(--blue);
+border-color:var(--cyan);
 
 }
 
 
-
-
-
-.map-container{
-
-height:350px;
-
-margin-top:50px;
-
-border-radius:25px;
-
-overflow:hidden;
-
-}
-
-
-
-.map-container iframe{
-
-width:100%;
-
-height:100%;
-
-border:0;
-
-}
 
 </style>
+
 
 
 
@@ -1011,9 +1026,12 @@ border:0;
 
 <h2>Présentation de CVR PRECISION</h2>
 
-<p>Une expertise au service du matériel industriel professionnel.</p>
+<p>
+Votre partenaire pour la valorisation du matériel industriel.
+</p>
 
 </div>
+
 
 
 <div class="presentation-grid">
@@ -1033,13 +1051,17 @@ Vous disposez d'équipements inutilisés, remplacés, en surplus, en arrêt de p
 
 
 <p>
-CVR PRECISION peut vous proposer une estimation rapide à partir de simples photos et informations.
+CVR PRECISION vous propose une estimation rapide à partir de simples photos et informations.
 </p>
 
 
+
 <a href="#contact" class="btn btn-primary">
+
 <i class="fa-solid fa-camera"></i>
+
 Demander une estimation
+
 </a>
 
 
@@ -1050,33 +1072,35 @@ Demander une estimation
 <div>
 
 
-<div class="glass-card">
+<div class="premium-card">
 
 <i class="fa-solid fa-industry"></i>
 
-<h3>Expert industriel</h3>
+<h3>Expertise industrielle</h3>
 
 <p>
-Nous étudions vos équipements et proposons une solution adaptée à vos besoins.
+Une connaissance du matériel professionnel pour accompagner vos projets.
 </p>
 
 </div>
 
 
-<div class="glass-card">
+
+<div class="premium-card">
 
 <i class="fa-solid fa-truck-fast"></i>
 
-<h3>Prise en charge complète</h3>
+<h3>Solution complète</h3>
 
 <p>
-Organisation de l'enlèvement, chargement et transport.
+Organisation de l'enlèvement, manutention et transport.
 </p>
 
 </div>
 
 
 </div>
+
 
 
 </div>
@@ -1085,7 +1109,8 @@ Organisation de l'enlèvement, chargement et transport.
 </div>
 
 </section>
-<!-- PARTIE 3 -->
+<!-- PARTIE 3/4 -->
+
 
 <section id="services">
 
@@ -1097,7 +1122,7 @@ Organisation de l'enlèvement, chargement et transport.
 <h2>Nos prestations</h2>
 
 <p>
-Une solution complète pour valoriser vos équipements industriels.
+Une prise en charge simple, rapide et professionnelle.
 </p>
 
 </div>
@@ -1115,7 +1140,7 @@ Une solution complète pour valoriser vos équipements industriels.
 <h3>Estimation sur photos</h3>
 
 <p>
-Envoyez-nous simplement des photos et les informations disponibles. Nous réalisons une première étude rapidement.
+Recevez une première étude rapide à partir de photos et des informations disponibles.
 </p>
 
 </div>
@@ -1125,12 +1150,12 @@ Envoyez-nous simplement des photos et les informations disponibles. Nous réalis
 
 <div class="service-card">
 
-<i class="fa-solid fa-chart-line"></i>
+<i class="fa-solid fa-euro-sign"></i>
 
-<h3>Valorisation rapide</h3>
+<h3>Achat direct</h3>
 
 <p>
-Nous recherchons la meilleure solution pour vos matériels industriels inutilisés.
+Nous rachetons vos équipements industriels à l'unité ou en lot.
 </p>
 
 </div>
@@ -1145,7 +1170,7 @@ Nous recherchons la meilleure solution pour vos matériels industriels inutilis�
 <h3>Achat en l'état</h3>
 
 <p>
-Nous pouvons reprendre vos équipements même lorsqu'ils nécessitent une remise en état.
+Matériel fonctionnel, arrêté ou nécessitant une remise en état : nous étudions votre proposition.
 </p>
 
 </div>
@@ -1160,7 +1185,7 @@ Nous pouvons reprendre vos équipements même lorsqu'ils nécessitent une remise
 <h3>Aucune garantie demandée</h3>
 
 <p>
-Une démarche simple adaptée aux entreprises souhaitant libérer rapidement leurs espaces.
+Une solution adaptée aux entreprises souhaitant se séparer rapidement de leurs équipements.
 </p>
 
 </div>
@@ -1170,27 +1195,12 @@ Une démarche simple adaptée aux entreprises souhaitant libérer rapidement leu
 
 <div class="service-card">
 
-<i class="fa-solid fa-location-dot"></i>
+<i class="fa-solid fa-earth-europe"></i>
 
-<h3>Déplacement national</h3>
-
-<p>
-Nous intervenons partout en France pour organiser la récupération.
-</p>
-
-</div>
-
-
-
-
-<div class="service-card">
-
-<i class="fa-solid fa-warehouse"></i>
-
-<h3>Sortie d'usine</h3>
+<h3>Intervention nationale</h3>
 
 <p>
-Nous gérons les opérations nécessaires depuis votre site industriel.
+Nous organisons nos déplacements partout en France.
 </p>
 
 </div>
@@ -1202,10 +1212,10 @@ Nous gérons les opérations nécessaires depuis votre site industriel.
 
 <i class="fa-solid fa-truck"></i>
 
-<h3>Chargement et transport</h3>
+<h3>Enlèvement organisé</h3>
 
 <p>
-Organisation du démontage, de la manutention et du transport adapté.
+Démontage, chargement et transport réalisés avec une organisation professionnelle.
 </p>
 
 </div>
@@ -1215,12 +1225,12 @@ Organisation du démontage, de la manutention et du transport adapté.
 
 <div class="service-card">
 
-<i class="fa-solid fa-file-signature"></i>
+<i class="fa-solid fa-file-circle-check"></i>
 
 <h3>Transport CMR</h3>
 
 <p>
-Gestion professionnelle des opérations logistiques.
+Gestion logistique adaptée aux contraintes industrielles.
 </p>
 
 </div>
@@ -1230,16 +1240,30 @@ Gestion professionnelle des opérations logistiques.
 
 <div class="service-card">
 
-<i class="fa-solid fa-money-check-dollar"></i>
+<i class="fa-solid fa-wallet"></i>
 
 <h3>Paiement sécurisé</h3>
 
 <p>
-Le règlement est effectué selon les conditions définies avant enlèvement.
+Les modalités de règlement sont définies avant l'enlèvement.
 </p>
 
 </div>
 
+
+
+
+<div class="service-card">
+
+<i class="fa-solid fa-industry"></i>
+
+<h3>Sortie d'usine</h3>
+
+<p>
+Nous accompagnons les opérations de libération d'espace industriel.
+</p>
+
+</div>
 
 
 </div>
@@ -1266,39 +1290,40 @@ Le règlement est effectué selon les conditions définies avant enlèvement.
 <h2>Pourquoi choisir CVR PRECISION</h2>
 
 <p>
-Un partenaire fiable pour vos équipements industriels.
+Une approche professionnelle basée sur la confiance.
 </p>
 
 </div>
-
 
 
 
 <div class="advantages-grid">
 
 
-<div class="advantage-card">
+
+<div class="advantage">
 
 <i class="fa-solid fa-bolt"></i>
 
 <h3>Réactivité</h3>
 
 <p>
-Une réponse rapide pour étudier vos propositions.
+Une réponse rapide pour étudier vos équipements.
 </p>
 
 </div>
 
 
 
-<div class="advantage-card">
+
+<div class="advantage">
 
 <i class="fa-solid fa-user-tie"></i>
 
 <h3>Professionnalisme</h3>
 
 <p>
-Une approche adaptée aux contraintes industrielles.
+Un interlocuteur spécialisé dans le matériel industriel.
 </p>
 
 </div>
@@ -1306,11 +1331,11 @@ Une approche adaptée aux contraintes industrielles.
 
 
 
-<div class="advantage-card">
+<div class="advantage">
 
 <i class="fa-solid fa-shield-halved"></i>
 
-<h3>Paiement sécurisé</h3>
+<h3>Sécurité</h3>
 
 <p>
 Des échanges clairs et une procédure transparente.
@@ -1321,14 +1346,14 @@ Des échanges clairs et une procédure transparente.
 
 
 
-<div class="advantage-card">
+<div class="advantage">
 
 <i class="fa-solid fa-clock"></i>
 
 <h3>Rapidité</h3>
 
 <p>
-Une organisation efficace pour réduire les délais.
+Une organisation efficace pour limiter les délais.
 </p>
 
 </div>
@@ -1336,14 +1361,14 @@ Une organisation efficace pour réduire les délais.
 
 
 
-<div class="advantage-card">
+<div class="advantage">
 
 <i class="fa-solid fa-handshake"></i>
 
 <h3>Accompagnement</h3>
 
 <p>
-Un interlocuteur unique pour votre projet.
+Nous vous accompagnons du premier contact jusqu'à l'enlèvement.
 </p>
 
 </div>
@@ -1351,14 +1376,14 @@ Un interlocuteur unique pour votre projet.
 
 
 
-<div class="advantage-card">
+<div class="advantage">
 
-<i class="fa-solid fa-earth-europe"></i>
+<i class="fa-solid fa-map-location-dot"></i>
 
-<h3>Intervention nationale</h3>
+<h3>France entière</h3>
 
 <p>
-Nous nous déplaçons partout en France.
+Déplacements et solutions adaptées partout en France.
 </p>
 
 </div>
@@ -1378,7 +1403,8 @@ Nous nous déplaçons partout en France.
 
 
 
-<section id="methode">
+
+<section id="process">
 
 
 <div class="container">
@@ -1386,135 +1412,86 @@ Nous nous déplaçons partout en France.
 
 <div class="section-title">
 
-<h2>Notre méthode</h2>
+<h2>Comment ça fonctionne ?</h2>
 
 <p>
-Un processus simple en 5 étapes.
+Un processus simple en quelques étapes.
 </p>
 
 </div>
 
 
 
-<div class="timeline">
+
+<div class="process">
 
 
 
-<div class="timeline-item">
+<div class="process-card">
 
+<span>1</span>
 
-<div class="timeline-icon">
-<i class="fa-solid fa-camera"></i>
-</div>
-
-
-<div class="timeline-content">
-
-<h3>1. Photos et informations</h3>
+<h3>Contact</h3>
 
 <p>
-Vous nous transmettez les éléments disponibles concernant votre matériel.
+Vous nous présentez votre matériel.
 </p>
 
 </div>
 
 
-</div>
 
+<div class="process-card">
 
+<span>2</span>
 
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-<i class="fa-solid fa-magnifying-glass"></i>
-</div>
-
-
-<div class="timeline-content">
-
-<h3>2. Analyse</h3>
+<h3>Analyse</h3>
 
 <p>
-Nous étudions votre équipement et son potentiel de valorisation.
+Nous étudions votre équipement.
 </p>
 
 </div>
 
 
-</div>
 
+<div class="process-card">
 
+<span>3</span>
 
-
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-<i class="fa-solid fa-file-contract"></i>
-</div>
-
-
-<div class="timeline-content">
-
-<h3>3. Proposition</h3>
+<h3>Offre</h3>
 
 <p>
-Nous vous transmettons une offre adaptée.
+Nous vous proposons une solution.
 </p>
 
 </div>
 
 
-</div>
 
+<div class="process-card">
 
+<span>4</span>
 
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-<i class="fa-solid fa-truck"></i>
-</div>
-
-
-<div class="timeline-content">
-
-<h3>4. Enlèvement</h3>
+<h3>Enlèvement</h3>
 
 <p>
-Organisation du chargement et du transport.
+Organisation du transport.
 </p>
 
 </div>
 
 
-</div>
 
+<div class="process-card">
 
+<span>5</span>
 
-
-<div class="timeline-item">
-
-
-<div class="timeline-icon">
-<i class="fa-solid fa-euro-sign"></i>
-</div>
-
-
-<div class="timeline-content">
-
-<h3>5. Paiement</h3>
+<h3>Paiement</h3>
 
 <p>
-Règlement selon les modalités convenues.
+Règlement selon accord.
 </p>
-
-</div>
-
 
 </div>
 
@@ -1527,23 +1504,28 @@ Règlement selon les modalités convenues.
 
 
 </section>
-<!-- PARTIE 4 -->
+
+
+
+
+
+
 
 <section id="contact">
 
+
 <div class="container">
 
 
 <div class="section-title">
 
-<h2>Contact CVR PRECISION</h2>
+<h2>Contactez-nous</h2>
 
 <p>
-Vous avez du matériel industriel à vendre ? Contactez-nous.
+Vous avez du matériel industriel à valoriser ?
 </p>
 
 </div>
-
 
 
 
@@ -1554,7 +1536,8 @@ Vous avez du matériel industriel à vendre ? Contactez-nous.
 <div>
 
 
-<div class="contact-card">
+
+<div class="contact-item">
 
 <i class="fa-solid fa-building"></i>
 
@@ -1562,7 +1545,9 @@ Vous avez du matériel industriel à vendre ? Contactez-nous.
 
 <h3>Entreprise</h3>
 
-<p>CVR PRECISION</p>
+<p>
+CVR PRECISION
+</p>
 
 </div>
 
@@ -1571,15 +1556,17 @@ Vous avez du matériel industriel à vendre ? Contactez-nous.
 
 
 
-<div class="contact-card">
+<div class="contact-item">
 
 <i class="fa-solid fa-user"></i>
 
 <div>
 
-<h3>Interlocuteur</h3>
+<h3>Contact</h3>
 
-<p>Eric</p>
+<p>
+Eric
+</p>
 
 </div>
 
@@ -1588,7 +1575,7 @@ Vous avez du matériel industriel à vendre ? Contactez-nous.
 
 
 
-<div class="contact-card">
+<div class="contact-item">
 
 <i class="fa-solid fa-phone"></i>
 
@@ -1601,7 +1588,6 @@ Vous avez du matériel industriel à vendre ? Contactez-nous.
 </p>
 
 <a href="tel:+33695527388" class="btn btn-primary">
-<i class="fa-solid fa-phone"></i>
 Appeler
 </a>
 
@@ -1612,31 +1598,7 @@ Appeler
 
 
 
-<div class="contact-card">
-
-<i class="fa-solid fa-envelope"></i>
-
-<div>
-
-<h3>Email</h3>
-
-<p>
-cvr.precision@gmail.com
-</p>
-
-<a href="mailto:cvr.precision@gmail.com" class="btn btn-primary">
-<i class="fa-solid fa-envelope"></i>
-Envoyer un email
-</a>
-
-</div>
-
-</div>
-
-
-
-
-<div class="contact-card">
+<div class="contact-item">
 
 <i class="fa-solid fa-location-dot"></i>
 
@@ -1662,25 +1624,20 @@ Envoyer un email
 
 
 
-
-<!-- FORMULAIRE CONNECTE EMAIL -->
-
 <div class="contact-form">
 
 
-<form action="https://formspree.io/f/TON_IDENTIFIANT" method="POST">
+<form action="https://formspree.io/f/xaqrpknp" method="POST">
+
 
 
 <div class="form-group">
 
-<label for="nom">
-Nom
-</label>
+<label>Nom</label>
 
 <input 
-id="nom"
-name="Nom"
 type="text"
+name="Nom"
 placeholder="Votre nom"
 required>
 
@@ -1691,14 +1648,11 @@ required>
 
 <div class="form-group">
 
-<label for="societe">
-Entreprise
-</label>
+<label>Entreprise</label>
 
 <input 
-id="societe"
-name="Entreprise"
 type="text"
+name="Entreprise"
 placeholder="Votre entreprise">
 
 </div>
@@ -1708,15 +1662,12 @@ placeholder="Votre entreprise">
 
 <div class="form-group">
 
-<label for="telephone">
-Téléphone
-</label>
+<label>Téléphone</label>
 
 <input 
-id="telephone"
-name="Téléphone"
 type="tel"
-placeholder="Votre numéro">
+name="Téléphone"
+placeholder="Votre téléphone">
 
 </div>
 
@@ -1725,14 +1676,11 @@ placeholder="Votre numéro">
 
 <div class="form-group">
 
-<label for="email">
-Email
-</label>
+<label>Email</label>
 
 <input 
-id="email"
-name="Email"
 type="email"
+name="Email"
 placeholder="Votre email"
 required>
 
@@ -1743,12 +1691,9 @@ required>
 
 <div class="form-group">
 
-<label for="message">
-Votre demande
-</label>
+<label>Votre demande</label>
 
 <textarea
-id="message"
 name="Message"
 rows="6"
 placeholder="Décrivez votre matériel"
@@ -1758,11 +1703,11 @@ required></textarea>
 
 
 
-
 <input type="hidden" name="_subject" value="Nouvelle demande CVR PRECISION">
 
 
-<button type="submit" class="btn btn-primary">
+
+<button class="btn btn-primary" type="submit">
 
 <i class="fa-solid fa-paper-plane"></i>
 
@@ -1782,11 +1727,17 @@ Envoyer la demande
 </div>
 
 
+</div>
 
+
+</section>
+<!-- PARTIE 4/4 -->
+
+
+<div class="container">
 
 
 <div class="map-container">
-
 
 <iframe
 
@@ -1798,17 +1749,10 @@ title="Carte CVR PRECISION">
 
 </iframe>
 
-
 </div>
 
 
-
 </div>
-
-
-</section>
-
-
 
 
 
@@ -1823,7 +1767,6 @@ title="Carte CVR PRECISION">
 <div class="footer-grid">
 
 
-
 <div>
 
 <img src="logo.png" alt="CVR PRECISION" class="footer-logo">
@@ -1835,7 +1778,6 @@ Rachat et valorisation de matériels industriels d'occasion partout en France.
 
 
 </div>
-
 
 
 
@@ -1856,50 +1798,96 @@ Rachat et valorisation de matériels industriels d'occasion partout en France.
 
 
 
-
-
 <div>
 
 <h3>Coordonnées</h3>
-
 
 <p>
 <i class="fa-solid fa-phone"></i>
 +33 6 95 52 73 88
 </p>
 
-
 <p>
 <i class="fa-solid fa-envelope"></i>
 cvr.precision@gmail.com
 </p>
 
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
 <p>
-© 2026 CVR PRECISION - Tous droits réservés.
+<i class="fa-solid fa-location-dot"></i>
+Le Vésinet
 </p>
 
+
 </div>
 
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2026 CVR PRECISION - Tous droits réservés.
+
+</div>
 
 
 </div>
 
 
 </footer>
-<!-- PARTIE 5 -->
+
+
+
+
+
+<button class="top-btn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+
+
 
 <style>
+
+
+/* MAP */
+
+
+.map-container{
+
+height:400px;
+
+margin-top:70px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+border:1px solid var(--border);
+
+box-shadow:0 25px 70px rgba(0,0,0,.4);
+
+}
+
+
+
+.map-container iframe{
+
+width:100%;
+
+height:100%;
+
+border:0;
+
+}
+
+
+
 
 
 /* FOOTER */
@@ -1907,9 +1895,9 @@ cvr.precision@gmail.com
 
 footer{
 
-background:#03070d;
-
 padding:70px 7% 30px;
+
+background:#030711;
 
 border-top:1px solid rgba(255,255,255,.1);
 
@@ -1941,16 +1929,6 @@ margin-bottom:20px;
 
 
 
-footer p{
-
-color:var(--gray);
-
-line-height:1.7;
-
-}
-
-
-
 footer h3{
 
 margin-bottom:20px;
@@ -1959,15 +1937,16 @@ margin-bottom:20px;
 
 
 
+footer p,
 footer a{
+
+color:var(--text);
+
+line-height:1.8;
 
 display:block;
 
-color:#cbd5e1;
-
-margin-bottom:12px;
-
-transition:.3s;
+margin-bottom:10px;
 
 }
 
@@ -1975,23 +1954,23 @@ transition:.3s;
 
 footer a:hover{
 
-color:var(--blue);
-
-padding-left:8px;
+color:var(--cyan);
 
 }
 
 
 
-.footer-bottom{
+.copyright{
 
 margin-top:50px;
 
 padding-top:25px;
 
+text-align:center;
+
 border-top:1px solid rgba(255,255,255,.1);
 
-text-align:center;
+color:#64748b;
 
 }
 
@@ -1999,18 +1978,16 @@ text-align:center;
 
 
 
-
-
-/* BOUTON RETOUR HAUT */
+/* BOUTON HAUT */
 
 
 .top-btn{
 
 position:fixed;
 
-right:25px;
-
 bottom:25px;
+
+right:25px;
 
 width:55px;
 
@@ -2018,9 +1995,9 @@ height:55px;
 
 border-radius:50%;
 
-border:0;
+border:none;
 
-background:linear-gradient(135deg,var(--blue),var(--blue2));
+background:linear-gradient(135deg,var(--blue),var(--cyan));
 
 color:white;
 
@@ -2052,18 +2029,16 @@ visibility:visible;
 
 
 
-
-
-/* ANIMATIONS */
+/* ANIMATION */
 
 
 .reveal{
 
 opacity:0;
 
-transform:translateY(40px);
+transform:translateY(35px);
 
-transition:.8s ease;
+transition:.8s;
 
 }
 
@@ -2081,15 +2056,18 @@ transform:translateY(0);
 
 
 
-
-
 /* TABLETTE */
 
 
 @media(max-width:1000px){
 
 
-.services-grid,
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
 
 .advantages-grid{
 
@@ -2098,48 +2076,19 @@ grid-template-columns:repeat(2,1fr);
 }
 
 
-.presentation-grid,
+.process{
 
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.presentation-grid,
 .contact-grid{
 
 grid-template-columns:1fr;
 
 }
-
-
-
-.timeline:before{
-
-left:25px;
-
-}
-
-
-
-.timeline-item{
-
-justify-content:flex-start;
-
-padding-left:70px;
-
-}
-
-
-
-.timeline-content{
-
-width:100%;
-
-}
-
-
-
-.timeline-icon{
-
-left:25px;
-
-}
-
 
 
 .footer-grid{
@@ -2149,11 +2098,7 @@ grid-template-columns:1fr;
 }
 
 
-
 }
-
-
-
 
 
 
@@ -2166,37 +2111,27 @@ grid-template-columns:1fr;
 @media(max-width:768px){
 
 
-
 section{
 
-padding:70px 5%;
+padding:75px 5%;
 
 }
 
-
-
-/* LOGO MOBILE */
 
 
 .logo img{
 
 width:95px;
 
-border-radius:15px;
+border-radius:16px;
 
 }
-
-
 
 
 
 header{
 
 padding:15px 5%;
-
-background:rgba(5,8,13,.35);
-
-backdrop-filter:blur(12px);
 
 }
 
@@ -2218,11 +2153,11 @@ top:0;
 
 right:-100%;
 
-width:80%;
-
 height:100vh;
 
-background:#070d16;
+width:80%;
+
+background:#050912;
 
 display:flex;
 
@@ -2231,8 +2166,6 @@ flex-direction:column;
 justify-content:center;
 
 align-items:center;
-
-gap:35px;
 
 transition:.4s;
 
@@ -2250,19 +2183,9 @@ right:0;
 
 
 
-.hero{
-
-padding-top:120px;
-
-min-height:auto;
-
-}
-
-
-
 .hero h1{
 
-font-size:2.5rem;
+font-size:2.35rem;
 
 letter-spacing:-1px;
 
@@ -2280,8 +2203,6 @@ font-size:1rem;
 
 .hero-buttons{
 
-display:flex;
-
 flex-direction:column;
 
 }
@@ -2292,31 +2213,15 @@ flex-direction:column;
 
 width:100%;
 
-margin-left:0!important;
-
-padding:16px 20px;
-
 }
 
 
 
 .services-grid,
-
-.advantages-grid{
+.advantages-grid,
+.process{
 
 grid-template-columns:1fr;
-
-}
-
-
-
-.glass-card,
-
-.service-card,
-
-.advantage-card{
-
-padding:25px;
 
 }
 
@@ -2330,7 +2235,7 @@ padding:25px 18px;
 
 
 
-.contact-card{
+.contact-item{
 
 padding:18px;
 
@@ -2348,7 +2253,7 @@ height:280px;
 
 .footer-grid{
 
-grid-template-columns:1fr;
+text-align:center;
 
 }
 
@@ -2376,18 +2281,14 @@ bottom:18px;
 
 
 
-/* PETITS TELEPHONES */
-
-
 @media(max-width:400px){
 
 
 .hero h1{
 
-font-size:2.1rem;
+font-size:2rem;
 
 }
-
 
 
 .logo img{
@@ -2397,8 +2298,8 @@ width:85px;
 }
 
 
-
 }
+
 
 
 </style>
@@ -2407,55 +2308,12 @@ width:85px;
 
 
 
-<button class="top-btn">
-
-<i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-
 
 
 <script>
 
 
-/* MENU MOBILE */
-
-
-const menuBtn=document.querySelector(".menu-btn");
-
-const navLinks=document.querySelector(".nav-links");
-
-
-
-if(menuBtn){
-
-
-menuBtn.addEventListener("click",()=>{
-
-
-navLinks.classList.toggle("active");
-
-
-menuBtn.innerHTML=
-navLinks.classList.contains("active")
-?
-'<i class="fa-solid fa-xmark"></i>'
-:
-'<i class="fa-solid fa-bars"></i>';
-
-
-
-});
-
-
-}
-
-
-
-
-
-/* HEADER */
+// HEADER
 
 const header=document.querySelector("header");
 
@@ -2463,7 +2321,7 @@ const header=document.querySelector("header");
 window.addEventListener("scroll",()=>{
 
 
-if(window.scrollY>50){
+if(window.scrollY>60){
 
 header.classList.add("scrolled");
 
@@ -2479,10 +2337,71 @@ header.classList.remove("scrolled");
 
 
 
-/* APPARITION SCROLL */
 
 
-const observer=new IntersectionObserver((entries)=>{
+// MENU MOBILE
+
+
+const menu=document.querySelector(".menu-btn");
+
+const links=document.querySelector(".nav-links");
+
+
+if(menu){
+
+
+menu.onclick=()=>{
+
+
+links.classList.toggle("active");
+
+
+menu.innerHTML=
+
+links.classList.contains("active")
+
+?
+
+'<i class="fa-solid fa-xmark"></i>'
+
+:
+
+'<i class="fa-solid fa-bars"></i>';
+
+
+
+};
+
+
+}
+
+
+
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+
+link.onclick=()=>{
+
+
+links.classList.remove("active");
+
+menu.innerHTML='<i class="fa-solid fa-bars"></i>';
+
+};
+
+
+});
+
+
+
+
+
+
+// APPARITION AU SCROLL
+
+
+const observer=new IntersectionObserver(entries=>{
 
 
 entries.forEach(entry=>{
@@ -2502,9 +2421,16 @@ entry.target.classList.add("active");
 
 
 
-document.querySelectorAll(".reveal").forEach(el=>{
+document.querySelectorAll(
+".service-card,.advantage,.premium-card,.process-card,.contact-item"
+)
+.forEach(el=>{
+
+
+el.classList.add("reveal");
 
 observer.observe(el);
+
 
 });
 
@@ -2512,7 +2438,9 @@ observer.observe(el);
 
 
 
-/* RETOUR HAUT */
+
+
+// RETOUR HAUT
 
 
 const top=document.querySelector(".top-btn");
@@ -2538,6 +2466,7 @@ top.classList.remove("active");
 
 top.onclick=()=>{
 
+
 window.scrollTo({
 
 top:0,
@@ -2546,162 +2475,51 @@ behavior:"smooth"
 
 });
 
+
 };
 
 
 
 </script>
-<!-- PARTIE 6 - FIN DU FICHIER -->
 
-<script>
 
 
-/* FERMETURE MENU APRES CLIC */
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
 
-
-link.addEventListener("click",()=>{
-
-
-if(navLinks){
-
-
-navLinks.classList.remove("active");
-
-
-if(menuBtn){
-
-menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>';
-
-}
-
-
-}
-
-
-});
-
-
-});
-
-
-
-
-
-/* ANIMATION DES CARTES */
-
-document.querySelectorAll(
-".service-card,.advantage-card,.glass-card,.contact-card"
-).forEach(card=>{
-
-
-card.addEventListener("mouseenter",()=>{
-
-
-card.style.transform="translateY(-8px)";
-
-
-});
-
-
-
-card.addEventListener("mouseleave",()=>{
-
-
-card.style.transform="translateY(0)";
-
-
-});
-
-
-});
-
-
-
-
-
-
-/* FORMULAIRE */
-
-const form=document.querySelector("form");
-
-
-if(form){
-
-
-form.addEventListener("submit",()=>{
-
-
-const button=form.querySelector("button");
-
-
-button.innerHTML=
-'<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...';
-
-
-
-});
-
-
-}
-
-
-
-
-
-</script>
-
-
-
-
-
-<!-- SEO STRUCTURE -->
 
 <script type="application/ld+json">
 
 {
+
 "@context":"https://schema.org",
+
 "@type":"LocalBusiness",
+
 "name":"CVR PRECISION",
-"description":"Rachat de matériel industriel d'occasion, machines-outils et équipements professionnels.",
+
+"description":"Rachat de matériel industriel d'occasion.",
+
 "telephone":"+33695527388",
+
 "email":"cvr.precision@gmail.com",
-"url":"https://cvr-precision.github.io/cvr/",
+
 "address":{
+
 "@type":"PostalAddress",
+
 "streetAddress":"131 Boulevard Carnot",
+
 "postalCode":"78110",
+
 "addressLocality":"Le Vésinet",
-"addressCountry":"France"
-},
-"areaServed":"France"
-}
 
-</script>
+"addressCountry":"FR"
 
-
-
-
-
-<script type="application/ld+json">
-
-{
-"@context":"https://schema.org",
-"@type":"Organization",
-"name":"CVR PRECISION",
-"logo":"logo.png",
-"contactPoint":{
-"@type":"ContactPoint",
-"telephone":"+33695527388",
-"contactType":"customer service",
-"email":"cvr.precision@gmail.com"
 }
 
 }
 
 </script>
-
 
 
 
